@@ -1,0 +1,55 @@
+
+
+.colorNavbar{
+    padding-top: 30px;
+    padding-bottom: 30px;
+background-color: #1C2D46;
+align-items: flex-end;
+}
+.textNavbar{
+    color:aliceblue;
+}
+.textNavbar:hover{
+    color:#45ACB4
+}
+.containerNavbar{
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    background:linear-gradient(180deg, #FFFDF4 0%, #FFFAEE 210.38%);
+    
+}
+.iconInput{
+   position: absolute;
+  right: 65rem;
+}
+.inputBusqueda{
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-color: #45ACB4;
+}
+.botonCarrito{
+    background: none;
+    border: none;
+}
+.botonHeader{
+    
+background-color: #EA5534;
+color: white;
+border: none;
+border-radius: 20px;
+width: 190px;
+height: 45px;
+left: calc(50% - 190px/2);
+top: 20px;
+}
+.botonHeader:hover{
+    background-color: #45ACB4;
+}
+.buscadorContainer{
+    position: absolute;
+    padding-right: 100px;
+    padding-left: 20px;
+}
