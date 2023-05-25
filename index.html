@@ -38,7 +38,7 @@
                         <a class="nav-link textNavbar" href="#presupuesto-Section">PRESUPUESTO</a>
                     </li>
                     
-                    <li><button class="botonCarrito"><svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li><button class="botonCarrito" id="verCarrito"  data-bs-toggle="modal" data-bs-target="#ventanaModal"><svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9.95499 40.4516C11.0522 45.9355 11.6009 48.6763 13.5697 50.2912C15.541 51.9062 18.3364 51.9062 23.9295 51.9062H33.8142C39.4074 51.9062 42.2027 51.9062 44.1716 50.2912C46.1429 48.6763 46.6891 45.9355 47.7887 40.4516L49.2137 33.3266C50.7907 25.4416 51.5792 21.4991 49.4417 18.889C47.3042 16.2812 43.281 16.2812 35.2392 16.2812H22.5069C14.4651 16.2812 10.4419 16.2812 8.30437 18.889C6.16687 21.4968 6.95537 25.4392 8.53237 33.3266L9.95499 40.4516Z" fill="#45ACB4"/>
                       <path d="M35.9961 25.7812C37.3078 25.7812 38.3711 24.7179 38.3711 23.4062C38.3711 22.0946 37.3078 21.0312 35.9961 21.0312C34.6844 21.0312 33.6211 22.0946 33.6211 23.4062C33.6211 24.7179 34.6844 25.7812 35.9961 25.7812Z" fill="#EDDA6A"/>
                       <path d="M21.7461 25.7812C23.0578 25.7812 24.1211 24.7179 24.1211 23.4062C24.1211 22.0946 23.0578 21.0312 21.7461 21.0312C20.4344 21.0312 19.3711 22.0946 19.3711 23.4062C19.3711 24.7179 20.4344 25.7812 21.7461 25.7812Z" fill="#EDDA6A"/>
@@ -50,6 +50,31 @@
             </div>
           </nav>
     <br>
+
+    <!--Ventana modal del carrito-->
+   <div class="">
+    <div class="modal fade modalContainer" id="ventanaModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
+        <div class="modal-dialog">
+          <div class="modal-content modalColor">
+            <div class="modal-header">
+              <h5 class="modal-title modalTitulo" id="modalTitle">CARRITO DE PRESUPUESTO</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="">
+              <div id="contenedorCarrito">
+                 </div>  
+            </div>
+           
+            <div class="modal-footer">
+              <button class="text-center botonHeader" id="vaciarCarrito">Pedir presupuesto</button>
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+   </div> 
     <header>
       <!--buscador-->
         <form class="container">

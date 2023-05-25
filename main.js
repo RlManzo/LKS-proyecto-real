@@ -5,6 +5,7 @@ class Producto{
         this.informacion = informacion;
         this.img = img;
         this.categoria = categoria;
+        this.cantidad = 1;
       }
     }
 
@@ -22,24 +23,45 @@ const contenedorProductos = document.getElementById("contenedorProductos");
 
 //funcion para pintar productos en la seccion Productos
 function mostrarProductos(){
-  arrayProductos.forEach(Producto =>{
+  arrayProductos.forEach(producto =>{
     const card = document.createElement("div");
     card.classList.add( "col-xl-3", "col-md-6", "col-xs-12");
     card.innerHTML =  `
                       <div class="">
-                         <img src="${Producto.img}" class="" alt="${Producto.nombre}">
+                         <img src="${producto.img}" class="" alt="${producto.nombre}">
                            <div>
-                            <h5 class="card-title text-center">${Producto.nombre}</h5>
-                            <h5 class="card-title text-center">${Producto.informacion}</h5>
-                            <button class="btn btn-primary botonHeader" id= boton${Producto.id}>Agregar</button>
-                            <button class="btn btn-primary" id= boton${Producto.id}>Pedir info</button>
+                            <h5 class="card-title text-center">${producto.nombre}</h5>
+                            <h5 class="card-title text-center">${producto.informacion}</h5>
+                            <button class="btn btn-primary botonHeader" id= boton${producto.id}>Agregar</button>
+                            <button class="btn btn-primary" id= boton>Pedir info</button>
                            </div>
                       </div>`
     
     contenedorProductos.appendChild(card);
 
+     const botonCard = document.getElementById(`boton${producto.id}`)
+     
+     botonCard.addEventListener("click", ()=>{
+      agregarAlCarrito(producto.id)
+     })
+
   })
 }
+
+//funcion agregar al carrito desde el boton de las cards
+
+function agregarAlCarrito(id){
+    const productoEnCarrito = carrito.find(Producto => Producto.id === id);
+    if(productoEnCarrito){
+        productoEnCarrito.cantidad++;
+    }
+    else{
+       const nuevoProducto = arrayProductos.find(Producto => Producto.id === id);
+       carrito.push(nuevoProducto);
+      console.log(carrito)
+    }
+}
+
 mostrarProductos()
 
 //funcion Buscador 
@@ -54,13 +76,13 @@ const filtrar = () => {
                 let nombre = producto.nombre.toLowerCase();
                    
                 if ( nombre.indexOf(texto) !== -1){
-                    resultado.innerHTML += `
+                    resultado.innerHTML += 
                     
-                    <li class="listStyle">
-                        <img src=${producto.img} class="imgBuscador" alt="..."<h5 class="textoBuscador" >${producto.nombre}</h5>
+                    `<li class="listStyle">
+                        <img src=${producto.img} <h5 class="textoBuscador" >${producto.nombre}</h5>
                         <p></p></li>
-                        <button class="btn btn-primary pComprar pComprarBuscador" id= botton${producto.id}>Comprar</button>    
-                    `
+                        <button class="botonHeader" id= botton${producto.id}>ver producto</button>`    
+                    
                     busqueda.style.opacity = 1;
                   
                     const botton = document.getElementById(`botton${producto.id}`);
@@ -70,9 +92,7 @@ const filtrar = () => {
                     } )
                   
                  }
-                   
-    
-               
+              
                if( resultado.innerHTML == '' ){
                  resultado.innerHTML = `<li>Producto no encontrado</li>`;
             }

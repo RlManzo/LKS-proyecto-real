@@ -53,3 +53,13 @@ top: 20px;
     padding-right: 100px;
     padding-left: 20px;
 }
+
+.modalContainer{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 750px;
+}*/
+.modalColor{
+    border: none;
+    box-shadow: 0px 1px 7px #45ACB4;
+}
