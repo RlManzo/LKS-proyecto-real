@@ -43,7 +43,7 @@ body::-webkit-scrollbar-thumb{
 
     font-family: 'Inter', sans-serif;
 */
-
+/*Todo los estilos escribelos con la misma jerarquia esta maquetado en el index*/
 /*Navbar*/
 .navbar{
     height: 127px;
@@ -223,6 +223,104 @@ body::-webkit-scrollbar-thumb{
     line-height: 19px;
     text-align: center;
     color: #FFFFFF;
+}
+/*Presupuesto*/
+
+
+/*Footer*/
+footer{
+    height: 300px;
+    background-color: var(--azul);
+}
+.box-logo{
+    width: 20%;
+}
+.box-logo p{
+    width: 90%;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 17px;
+    color: var(--blanco);
+    margin-top: 10px;
+}
+.box-items{
+    width: 20%;
+}
+.box-items h5{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--celeste);
+    margin: 0 0 25px 0;
+}
+.box-items a{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 25px;
+    text-decoration: none;
+    color: var(--blanco);
+    margin: 0 0 0 0;
+}
+
+.box-contacto{
+    width: 20%;
+}
+.box-contacto h5{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--celeste);
+    margin: 0 0 25px 0;
+}
+.box-contacto div .box-son p{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 25px;
+    color: var(--blanco);
+    margin: 0 0 0 15px;
+}
+.box-contacto div .box-son img{
+    width: 20px;
+    height: 16px;
+}
+.box-redes{
+    width: 20%;
+}
+.box-redes h5{
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 19px;
+    color: var(--celeste);
+    margin: 0 0 25px 0;
+}
+.box-son-redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.box-son-redes a img{
+    width: 40px;
+    height: 40px;
+}
+.youtube{
+    width: 48px !important;
+    height: 34px !important;
+}
+
+.derechos h6{
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 19px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.46);
 }
 
 
