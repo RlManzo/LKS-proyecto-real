@@ -78,7 +78,7 @@ function mostrarCarrito(){
         card.classList.add( "col-xl-3", "col-md-6", "col-xs-12");
         innerHTML = `${producto.nombre} ${producto.precio}`
         card.innerHTML =  `
-                          <div>
+                          <div class="container">
                           <div class="img1">
                           <img src="${producto.img}" class="imgProductos" alt="${producto.nombre}">
                            <button class="botonEliminar" id= eliminar${producto.id}>
@@ -129,7 +129,7 @@ const sendcarrito = () => {
   
   
   
-  mandarCarrito.innerHTML = ` <button class="text-center botonHeader"" ><a class="btn-primary" href="https://api.whatsapp.com/send?phone=1131686767&text=Hola!%20Me%20gustaria%20hacer%20el%20siguiente%20pedido:%0A%0A${totalCompra}%0A%0A" target="_blank"</>consultar</button>`
+  mandarCarrito.innerHTML = ` <button class="text-center botonHeader"" ><a class="" href="https://api.whatsapp.com/send?phone=1131686767&text=Hola!%20Me%20gustaria%20hacer%20el%20siguiente%20pedido:%0A%0A${totalCompra}%0A%0A" target="_blank"</>Pedir Presupuesto</button>`
   
    
   
