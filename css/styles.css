@@ -165,6 +165,88 @@ nav{
 
 /*Main*/
 
+/* Modal*/
+.modalColor{
+    border: none;
+    box-shadow: 0px 1px 7px #45ACB4;
+}
+.botonEliminar{
+    border: none;
+    background-color: white;
+    position: absolute;
+   margin-left: 384px;
+   
+    
+}
+/*
+.modalContainer{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 750px;
+}*/
+.img1{
+    position: absolute;
+    width: 65px;
+    margin-bottom: 30px;
+    
+}
+.titleCards{
+    position: relative;
+    margin-left: 77px;
+    padding-bottom: 50px;
+}
+
+.controlesCarrousel{
+    width: 1350px;
+}
+
+/*seccion nuestros productos*/
+.productosTitle{
+    margin-top: 50px;
+    width: 750px;
+}
+.divProductos{
+    left: 200px;
+}
+.cardStyles{
+    margin-top: 50px;
+    margin-right: 50px;
+    width: 100%;
+    
+}
+.cardImg{
+    width: 230px;
+    border-radius: 10px;
+    border-color: var(--celeste);
+}
+.botonHeader{
+    
+    background-color: #EA5534;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 190px;
+    height: 45px;
+    left: calc(50% - 190px/2);
+    top: 20px;
+    }
+    .botonHeader:hover{
+        background-color: #45ACB4;
+    }
+.botonProductos1{
+    
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 120px;
+          
+}
+.botonProductos2{
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 120px;
+    background-color: var(--celeste);
+}
+
 /*Nosotros*/
 .nosotros{
     height: 830px;
@@ -377,45 +459,23 @@ footer{
     background: none;
     border: none;
 }
-.botonHeader{
-    
-background-color: #EA5534;
-color: white;
-border: none;
-border-radius: 20px;
-width: 190px;
-height: 45px;
-left: calc(50% - 190px/2);
-top: 20px;
-}
-.botonHeader:hover{
-    background-color: #45ACB4;
-}
+
 .buscadorContainer{
     position: absolute;
-    padding-right: 100px;
+    padding-right: 50px;
     padding-left: 20px;
+    margin-left: 60px;
 }
-/*
-.modalContainer{
-    display: flex;
-    justify-content: flex-end;
-    padding-left: 750px;
-}*/
-.modalColor{
-    border: none;
-    box-shadow: 0px 1px 7px #45ACB4;
-}
-.botonEliminar{
-    border: none;
-    background-color: white;
-    position: absolute;
-    margin-left: 330px;
-    
+.botonBuscador{
+    margin-left: 90px;
+    position: relative;
+    padding-right: 7px;
+    padding-left: 11px;
+
 }
 
-/*seccion nuestros productos*/
-.productosTitle{
-    margin-top: 50px;
-    width: 750px;
+.listStyles{
+   margin-bottom: 45px;
+   list-style-type: none;
+   margin-top: 20px;
 }
