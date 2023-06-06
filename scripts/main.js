@@ -59,6 +59,14 @@ function mostrarProductos(){
      })
      botonCard.addEventListener("click", ()=>{
       agregarAlCarrito(producto.id)
+      Toastify({
+        text: "Agregaste el producto!",
+        gravity: "top",
+        style: {
+            background: "linear-gradient(247deg, rgba(37,177,86,0.6727065826330532) 0%, rgba(44,205,14,1) 100%)",
+            
+        }
+    }).showToast();
      })
 
   })
@@ -134,6 +142,14 @@ contenedorDetalleProducto.appendChild(card);
 const botonModal = document.getElementById(`botonModal${producto.id}`);
 botonModal.addEventListener("click",()=>{
   agregarAlCarrito(producto.id)
+  Toastify({
+    text: "Agregaste el producto!",
+    gravity: "top",
+    style: {
+        background: "linear-gradient(247deg, rgba(37,177,86,0.6727065826330532) 0%, rgba(44,205,14,1) 100%)",
+        
+    }
+}).showToast();
 })
 
 const cancelarProducto = document.getElementById("cancelarModal")
