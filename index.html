@@ -53,15 +53,17 @@
   
   <!--Ventana modal del carrito-->
   <div class="">
-    <div class="modal fade modalContainer justify-content-end d-row" id="ventanaModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="fade modalContainer justify-content-end d-row" id="ventanaModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
         <div class="modal-dialog">
           <div class="modal-content modalColor">
             <div class="modal-header">
               <h5 class="modal-title modalTitulo" id="modalTitle">CARRITO DE PRESUPUESTO</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
             </div>
             <div class="modal-body">
-              <div id="contenedorCarrito"></div>  
+              <div id="contenedorCarrito">
+                <p>sin productos</p>
+              </div>  
             </div>
             <div class="modal-footer">   
               <button class="text-center botonHeader" id="mandarCarrito">Pedir presupuesto</button>
@@ -149,12 +151,45 @@
       <section class="col-12" id="producto">
         <div class="container text-center">
           <img class="productosTitle" src="./assets/nuestrosProductos.png" alt="">
-          <div id="contenedorProductos" class="container row divProductos">
-              <!--cards de productos-->
+          <br>
+          <div class="d-flex selectStyles">
+            <h5 class="selectText" id="botonProducto1">TODOS LOS PRODUCTOS</h5>
+            <h5 class="selectText" id="botonProducto2">LKS STYLE</h5>
+            <h5 class="selectText">TIPO DE SERVICIOS</h5>
+            <h5 class="selectText">PERSONALIZA TU IDEA</h5>
+            
           </div>
+          
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered " role="document">
+    <div class="modal-content">
+      <button type="button" class="btn-close closeModal" data-bs-dismiss="modal" aria-label="Close" id="cerrarModal"></button>
+      <div class="modal-body tamañoModal">
+      <div id="contenedorDetalleProducto">
+        
+      </div>
+      </div>
+        
+    </div>
+  </div>
+</div>
+          
+<div id="contenedorProductos" class="divProductos">
+              <!--cards de productos-->
+</div>
         </div>
       </section>
      <br>
+
+  
+
+
+
+
+
       <!--seccion nosotros (Augusto)-->
       <section class="col-12 d-flex flex-column justify-content-center align-items-center nosotros" id="nosotros">
           <div class="text-center d-flex justify-content-center align-items-center box-title">

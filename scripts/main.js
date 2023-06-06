@@ -9,42 +9,54 @@ class Producto{
       }
     }
 
-const producto1 = new Producto(1,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","vinilo");
-const producto2 = new Producto(2,"remera vinilo","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","sublimable");
-const producto3 = new Producto(3,"remera serigrafia","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","polimero");
-const producto4 = new Producto(4,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","3d");
-const producto5 = new Producto(5,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","sublimable");
-const producto6 = new Producto(6,"remera serigrafia","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","polimero");
-const producto7 = new Producto(7,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","3d");
-const producto8 = new Producto(8,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","sublimable");
+const producto1 = new Producto(1,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","vinilo","vinilo");
+const producto2 = new Producto(2,"remera vinilo","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","sublimable","sublimable");
+const producto3 = new Producto(3,"remera serigrafia","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","polimero","vinilo");
+const producto4 = new Producto(4,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","3d","sublimable");
+const producto5 = new Producto(5,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","sublimable","sublimable");
+const producto6 = new Producto(6,"remera serigrafia","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","polimero","vinilo");
+const producto7 = new Producto(7,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","3d","vinilo");
+const producto8 = new Producto(8,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","sublimable","dtf");
+const producto9 = new Producto(9,"remera sublimada","https://d2r9epyceweg5n.cloudfront.net/stores/842/939/products/remera-arg-firmas-blanca-011-05cf22ab7fc24c586f16764145168407-1024-1024.jpg","sublimable","dtf");
 
-
-const arrayProductos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7,producto8];
-
+const arrayProductos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7,producto8,producto9];
+console.log(arrayProductos)
 const carrito = [];
-
+const modal = [];
 const contenedorProductos = document.getElementById("contenedorProductos");
+
+
+//FUNCIONES DE SECCION PRODUCTOS
 
 //funcion para pintar productos en la seccion Productos
 function mostrarProductos(){
   arrayProductos.forEach(producto =>{
     const card = document.createElement("div");
-    card.classList.add( "col-xl-3", "col-6", "col-xs-12");
+    
     card.innerHTML =  `
                       <div class="cardStyles position-relative text-center col-6">
-                         <img class="cardImg" src="${producto.img}" class="" alt="${producto.nombre}">
-                           <div>
-                            <h5 class="card-title text-center">${producto.nombre}</h5>
-                            <h5 class="card-title text-center h6">${producto.info}</h5>
-                            <button class=" botonHeader botonProductos1" id= boton${producto.id}>Agregar</button>
-                            <button class="botonHeader botonProductos2" id= boton><a class="" href="https://api.whatsapp.com/send?phone=1131686767&text=Hola!%20Me%20gustaria%20saber%20mas%20%20sobre%20el%20siguiente%20articulo:%0A%0A${producto.nombre}%20Categoria:%0A%0A${producto.info}%0A%0A" target="_blank"</> info</button>
-                           </div>
-                      </div>`
+                         <img class="cardImg" src="${producto.img}" id="detalle${producto.id}" alt="${producto.nombre}" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                           <div class="">
+                            <h5 class="textCard">${producto.nombre}</h5>
+                            <h5 class="card-title h6">${producto.info}</h5>
+                            </div>
+                            <div class="infoCard">
+                            <button class=" botonHeader botonProductos1" id= boton${producto.id}>AGREGAR</button>
+                            <button class="botonHeader botonProductos2" id= boton><a class="" href="https://api.whatsapp.com/send?phone=1131686767&text=Hola!%20Me%20gustaria%20saber%20mas%20%20sobre%20el%20siguiente%20articulo:%0A%0A${producto.nombre}%20Categoria:%0A%0A${producto.info}%0A%0A" target="_blank"</>INFO</button>
+                            
+                            </div>
+                      </div>
+                      `
     
     contenedorProductos.appendChild(card);
 
      const botonCard = document.getElementById(`boton${producto.id}`)
-     
+     const detalleProducto =document.getElementById(`detalle${producto.id}`)
+    
+     detalleProducto.addEventListener("click",()=>{
+      agregarAlModal(producto.id)     
+      mostrarDetalleProducto()
+     })
      botonCard.addEventListener("click", ()=>{
       agregarAlCarrito(producto.id)
      })
@@ -68,11 +80,94 @@ function agregarAlCarrito(id){
 
 mostrarProductos()
 
+
+//FUNCIONES DEL DETALLE PRODUCTO(MODAL)
+
+//modal detalle producto
+const contenedorDetalleProducto = document.getElementById("contenedorDetalleProducto")
+
+//funcion agregar el producto al modal
+function agregarAlModal(id){
+  const productoEnCarrito = modal.find(Producto => Producto.id === id);
+    if(productoEnCarrito){
+        productoEnCarrito.cantidad++;
+    }
+    else{
+       const nuevoProducto = arrayProductos.find(Producto => Producto.id === id);
+       modal.push(nuevoProducto);
+      console.log(carrito)
+    }
+}
+  
+
+function mostrarDetalleProducto(){
+  contenedorDetalleProducto.innerHTML = "";
+    modal.forEach(producto => {
+    const card = document.createElement("div"); 
+    innerHTML = `${producto.nombre} ${producto.precio}`
+    card.innerHTML =  `
+                      <div class="row g-0 ">
+                        <div class="col-md-2">
+                        <img src="${producto.img}" class="imgModalDetail card-img-top" alt="${producto.nombre}">
+                        <img src="${producto.img}" class="imgModalDetail card-img-top" alt="${producto.nombre}">
+                        <img src="${producto.img}" class="imgModalDetail card-img-top" alt="${producto.nombre}">
+                        <img src="${producto.img}" class="imgModalDetail card-img-top" alt="${producto.nombre}">
+                        </div>
+                        <div class="col-md-2">
+                         <img src="${producto.img}" class="imgModal card-img-top" alt="${producto.nombre}">
+                         </div>
+                         <div class=" col-md-8">
+                            <div className="card-body text-center .col-md-4 .ms-auto ">
+                            <h5 class="h3  card-title textModalProducto">${producto.nombre}</h5>
+                            
+                            <h6 class=" text-end h8 textDescriptionModal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta fugit vero dicta nisi, dolorem harum cumque excepturi a. Quod omnis soluta distinctio adipisci eum! Sit facilis repellat commodi tempore? </h6>
+                               <div class="d-flex botonesDetalleModal">
+                                  <button class="text-center botonHeader botonDetalle1" id="botonModal${producto.id}">AGREGAR</button>
+                                  <button class="text-center botonHeader botonDetalle2" data-bs-dismiss="modal" aria-label="Close" id="cancelarModal">CANCELAR</Button>
+                               </div>
+                               </div>
+                         </div>              
+                      </div>
+   `
+
+contenedorDetalleProducto.appendChild(card);
+const botonModal = document.getElementById(`botonModal${producto.id}`);
+botonModal.addEventListener("click",()=>{
+  agregarAlCarrito(producto.id)
+})
+
+const cancelarProducto = document.getElementById("cancelarModal")
+cancelarProducto.addEventListener("click",()=>{
+  eliminarProductoModal(producto.id)
+})
+});
+
+}
+//funcion para evitar que el modal se duplique
+
+const cerrarModal = document.getElementById("cerrarModal")
+cerrarModal.addEventListener("click", ()=>{
+  eliminarProductoModal(producto.id)
+})
+
+function eliminarProductoModal(id){
+  const producto = modal.find(Producto => Producto.id === id);
+  const indice = modal.indexOf(producto);
+  modal.splice(indice, 1);
+  modal = []
+mostrarDetalleProducto();
+}
+
+
+//FUNCIONES DEL CARRITO
+
+
 //funcion ver carrito haciendo click en el boton
 const verCarrito = document.getElementById("verCarrito")
 const contenedorCarrito = document.getElementById("contenedorCarrito")
 verCarrito.addEventListener("click",()=>{
-      mostrarCarrito();
+    mostrarCarrito()
+     
 
 
 })
@@ -92,7 +187,7 @@ function mostrarCarrito(){
                           </i></button>
                           <img src="${producto.img}" class="img1" alt="${producto.nombre}">
                           
-                          <div class="titleCards">
+                          <div class="titleCards ">
                           <h5 class="h6">${producto.nombre}</h5>
                           <h6 class="h8">${producto.categoria}</h>
                           </div>
@@ -145,6 +240,8 @@ const sendcarrito = () => {
   
 }
 
+//BUSCADOR
+
 //funcion Buscador <h5 class="textoBuscador" >${producto.nombre}</h5>
 const buscador = document.getElementById("buscador");
 const resultado = document.getElementById("resultado");
@@ -163,7 +260,7 @@ const filtrar = () => {
                        <img class="img1"  src=${producto.img} />
                         
                       
-                        <button class="botonProductos1 botonHeader botonBuscador" id= botton${producto.id}>ver producto</button>    
+                        <button class="botonProductos1 botonHeader botonBuscador" id= botton${producto.id}><a href="#producto"> ver producto</a></button>    
                     </li>`
                     busqueda.style.opacity = 1;
                   

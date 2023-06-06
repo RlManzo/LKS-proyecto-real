@@ -178,12 +178,40 @@ nav{
    
     
 }
-/*
+
 .modalContainer{
-    display: flex;
-    justify-content: flex-end;
-    padding-left: 750px;
-}*/
+  
+        --bs-modal-zindex: 1055;
+        --bs-modal-width: 450px;
+        --bs-modal-padding: 1rem;
+        --bs-modal-margin: 0.5rem;
+        --bs-modal-color: ;
+        --bs-modal-bg: #fff;
+        --bs-modal-border-color: var(--bs-border-color-translucent);
+        --bs-modal-border-width: 1px;
+        --bs-modal-border-radius: 0.5rem;
+        --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        --bs-modal-inner-border-radius: calc(0.5rem - 1px);
+        --bs-modal-header-padding-x: 1rem;
+        --bs-modal-header-padding-y: 1rem;
+        --bs-modal-header-padding: 1rem 1rem;
+        --bs-modal-header-border-width: 1px;
+        --bs-modal-title-line-height: 1.5;
+        --bs-modal-footer-gap: 0.5rem;
+        --bs-modal-footer-bg: ;
+        --bs-modal-footer-border-width: 1px;
+        position: fixed;
+        top: 0;
+        left: 455px;
+        z-index: var(--bs-modal-zindex);
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        outline: 0;
+    
+}
 .img1{
     position: absolute;
     width: 65px;
@@ -205,8 +233,32 @@ nav{
     margin-top: 50px;
     width: 750px;
 }
+.selectStyles{
+    gap: 1rem;
+    justify-content: space-around;
+    margin-top: 100px;
+    
+}
+.selectText{
+    color: #868686;
+    cursor: pointer;
+}
+.selectText:after{
+    
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.6s ease-in-out;
+}
+.selectText:hover{
+    color: var(--celeste);
+    text-decoration: underline;
+}
 .divProductos{
-    left: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3, 400px);
+    justify-content: center;
+    margin-bottom: 50px;
 }
 .cardStyles{
     margin-top: 50px;
@@ -215,9 +267,24 @@ nav{
     
 }
 .cardImg{
-    width: 230px;
+    width: 260px;
     border-radius: 10px;
     border-color: var(--celeste);
+    cursor: pointer;
+}
+.infoCard{
+   display: flex;
+   
+   left: 100px;
+   justify-content: center;
+   color: var(--azul);
+
+}
+.textCard{
+    margin-left: 40px;
+    padding-left: 20px;
+    padding-right: 50px;
+    display: block;
 }
 .botonHeader{
     
@@ -234,19 +301,82 @@ nav{
         background-color: #45ACB4;
     }
 .botonProductos1{
-    
-        padding-right: 20px;
+        
+        padding-right: 80px;
         padding-left: 20px;
         width: 120px;
+        margin-right: 20px;
+        
           
 }
 .botonProductos2{
-    padding-right: 20px;
+    padding-right: 110px;
     padding-left: 20px;
     width: 120px;
     background-color: var(--celeste);
 }
 
+/*Modal Productos*/
+.modal{
+    --bs-modal-width: 741px;
+}
+.imgModal{
+    width: 345px;
+    border-radius: 15px;
+    border-color: var(--celeste);
+    margin-bottom: 30px;
+    position: relative;
+    margin-left: -40px;
+}
+.imgModalDetail{
+    width: 50px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+ 
+}
+.textModalProducto{
+    position: relative;
+    display: flex;
+   justify-content: center;
+    margin-left: 135px;
+    margin-top: 20px;
+}
+
+.textDescriptionModal{
+    font-size: 12px;
+    margin-left: 193px;
+    margin-right: 38px;
+    margin-top: 22px;
+}
+.botonesDetalleModal{
+    position: absolute;
+    margin-left: 215px;
+    margin-top: 156px;
+    font-size: 15px;
+}
+.botonDetalle1{
+    width: 119px;
+    height: 33px;
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+.botonDetalle2{
+    width: 119px;
+    height: 33px;
+    margin-right: 15px;
+    border-radius: 8px;
+    background-color: var(--celeste);
+}
+.closeModal{
+    position: relative;
+    margin-left: 700px;
+    margin-top: 10px;
+    color: var(--ladrillo);
+}
 /*Nosotros*/
 .nosotros{
     height: 830px;
