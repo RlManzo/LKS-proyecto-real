@@ -314,6 +314,10 @@ nav{
     padding-left: 20px;
     width: 120px;
     background-color: var(--celeste);
+    color: white;
+}
+.botonProductos2:hover{
+    background-color: var(--ladrillo);
 }
 
 /*Modal Productos*/
@@ -658,7 +662,14 @@ footer{
     background: none;
     border: none;
 }
-
+.numeroCarrito{
+    color: white;
+    padding: 5px;
+    background-color: var(--ladrillo);
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 50px;
+}
 .buscadorContainer{
     position: absolute;
     padding-right: 50px;

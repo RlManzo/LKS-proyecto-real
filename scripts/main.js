@@ -59,6 +59,7 @@ function mostrarProductos(){
      })
      botonCard.addEventListener("click", ()=>{
       agregarAlCarrito(producto.id)
+      agregarNumeroCarrito()
       Toastify({
         text: "Agregaste el producto!",
         gravity: "top",
@@ -142,6 +143,7 @@ contenedorDetalleProducto.appendChild(card);
 const botonModal = document.getElementById(`botonModal${producto.id}`);
 botonModal.addEventListener("click",()=>{
   agregarAlCarrito(producto.id)
+  agregarNumeroCarrito()
   Toastify({
     text: "Agregaste el producto!",
     gravity: "top",
@@ -183,10 +185,18 @@ const verCarrito = document.getElementById("verCarrito")
 const contenedorCarrito = document.getElementById("contenedorCarrito")
 verCarrito.addEventListener("click",()=>{
     mostrarCarrito()
-     
-
-
 })
+
+//funcion para agregar numero carrito
+const numeroCarrito = document.getElementById("numeroCarrito");
+let contador = 0;
+function agregarNumeroCarrito(){
+  contador++;
+  numeroCarrito.textContent = contador
+  
+}
+
+//funcion productos en el carrito
 function mostrarCarrito(){
       contenedorCarrito.innerHTML = "";
       carrito.forEach(producto => {
@@ -207,10 +217,7 @@ function mostrarCarrito(){
                           <h5 class="h6">${producto.nombre}</h5>
                           <h6 class="h8">${producto.categoria}</h>
                           </div>
-                          
-                          
-                          
-                         
+                                         
           </div>
        `
 
@@ -219,6 +226,9 @@ contenedorCarrito.appendChild(card);
 const botonEliminarProducto = document.getElementById(`eliminar${producto.id}`)
 botonEliminarProducto.addEventListener("click", ()=>{
   eliminarProducto(producto.id);  
+  contador--;
+  numeroCarrito.textContent = contador
+  
      });
    });
 }
