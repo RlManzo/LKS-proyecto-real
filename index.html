@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LKS Studio - Inicio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <!--Tasty CSS-animated hamburgers-->
+  <link rel="stylesheet" href="./css/hamburgers.css">
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -26,13 +28,13 @@
 
         </div>
 
-        <div class="menu-items d-flex justify-content-around align-items-center">
+        <div class="menu-items d-flex justify-content-around align-items-center" id="menuNavbar">
 
-          <a href="#header">INICIO</a>
-          <a href="#producto">PRODUCTOS</a>
-          <a href="#servicios">SERVICIOS</a>
-          <a href="#nosotros">NOSOTROS</a>
-          <a href="#presupuesto">PRESUPUESTO</a>
+          <a class="all all-colour" href="#header">INICIO</a>
+          <a class="all" href="#producto">PRODUCTOS</a>
+          <a class="all" href="#servicios">SERVICIOS</a>
+          <a class="all" href="#nosotros">NOSOTROS</a>
+          <a class="all" href="#presupuesto">PRESUPUESTO</a>
 
         </div>
 
@@ -45,6 +47,13 @@
               <path d="M23.5273 13.9063C23.5273 12.489 24.0903 11.1298 25.0925 10.1276C26.0946 9.1255 27.4538 8.5625 28.8711 8.5625C30.2883 8.5625 31.6475 9.1255 32.6497 10.1276C33.6518 11.1298 34.2148 12.489 34.2148 13.9063V16.2813H35.2385C36.1338 16.2813 36.9793 16.2813 37.7773 16.286V13.9063C37.7773 11.5442 36.839 9.27883 35.1688 7.60858C33.4985 5.93833 31.2332 5 28.8711 5C26.509 5 24.2437 5.93833 22.5734 7.60858C20.9032 9.27883 19.9648 11.5442 19.9648 13.9063V16.286C20.7628 16.2813 21.6083 16.2813 22.5037 16.2813H23.5273V13.9063Z" fill="#EDDA6A"/>
             </svg>
           </button>
+
+          <button class="hamburger hamburger--spring" type="button" id="burgerNavbar">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
+          
         </div>
 
       </div>
@@ -75,7 +84,7 @@
   <header class="container-fluid" id="header" style="margin-bottom: 70px;">
     <div class="row">
 
-      <section class="col-12 mt-5 mb-4">
+      <section class="col-12 mt-5 mb-4 box-header-buscador">
         <!--buscador-->
         <form class="form-buscador">
           <input type="text" placeholder="  ¿Qué estas buscando?" id="buscador" class="inputBusqueda" >
@@ -91,7 +100,9 @@
 
       </section>
 
-      <section class="col-12 d-flex justify-content-center align-items-center">
+      <section class="col-12 d-flex flex-column justify-content-center align-items-center d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center 
+      d-md-flex flex-md-row justify-content-md-center align-items-md-center d-lg-flex flex-lg-row justify-content-lg-center align-items-lg-center 
+      d-xl-flex flex-xl-row justify-content-xl-center align-items-xl-center d-xxl-flex flex-xxl-row justify-content-xxl-center align-items-xxl-center">
 
         <div class="container-texto d-flex flex-column justify-content-center align-items-center">
           <img src="./assets/iconoHeader.svg" alt="icono">
@@ -160,33 +171,44 @@
           <div class="text-center d-flex justify-content-center align-items-center box-title">
             <h4 class="mt-3 mb-3">¿Quienes somos?</h4>
           </div>
-          <div class="text-center d-flex justify-content-center align-items-center mt-2 box-p">
+          <div class="text-center d-flex justify-content-center align-items-center box-p">
             <p>
-              Somos una pareja de diseñadores que desde 2018 ofrecemos servicios de 
-              personalización a través de la sublimación, vinilos, DTF y serigrafía. 
-              También contamos con servicios como botones publicitarios, diseños de flyers, 
-              impresiones 3D y kits para fiestas infantiles.
+              LKS nace en mayo del 2018 con la compra de nuestras primeras máquinas, si bien siempre tuvimos 
+              la idea de vender remeras personalizadas, la oportunidad de hacerlo tangible fue sino hasta ese 
+              año. Me despiden de mi trabajo, me indemnizan y decidimos invertir en ese sueño que teníamos. 
+              De ahí en más fue mucho aprendizaje, cómo estampar cada producto, un poco de prueba error, 
+              buscar mucha información en internet, no había tantos cursos como hay ahora, contactar proveedores, 
+              elegir el que mejor nos parecía. Lo que deseamos es que nos identifiquen con productos y servicios 
+              de calidad, que no somos uno más del montón, que realmente le ponemos empeño para lograr plasmar esa 
+              idea con la que viene el cliente buscando lo que mejor se adapte para satisfacerlo.
             </p>
           </div>
-        <div class="d-flex justify-content-center align-items-end" style="gap: 200px; height: 80%; margin: 0 0 40px 0" >
+        <div class="box-personas-nosotros">
 
           <div class="contenedor-persona">
-            <img src="./assets/juan.png" alt="juan">
-            <h5>Juan</h5>
+            <img src="./assets/lucas.webp" alt="lucas">
+            <h5>Lucas Martin Moyano</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Dicta dolorum tempora maxime delectus assumenda quas aliquid eveniet nulla 
-              aperiam explicabo officiis molestiae rerum nisi quod animi rem, totam culpa minima!
+              Mi nombre es Lucas, más conocido como "El Piojo", tengo la mejor esposa del mundo, que me acompaña 
+              en mis locuras y recorremos juntos este camino. Amante de la tecnología, del diseño lo que hace que 
+              yo sea el encargado de plasmar las ideas de los clientes en un diseño para personalizar ese producto 
+              elegido. Me gusta buscarle la vuelta para que cada diseño sea único. Me gusta aprender cosas nuevas y 
+              eso ayuda a que día a día incorporamos nuevos productos, nuevas técnicas a nuestro emprendimiento y 
+              poder ofrecer algo distinto, original. Mi rol principal es el diseño y personalización de los productos.
+
             </p>
           </div>
 
           <div class="contenedor-persona">
-            <img src="./assets/mariana.png" alt="mariana">
-            <h5>Mariana</h5>
+            <img src="./assets/paola.webp" alt="paola">
+            <h5>Paola Lucero Petinari</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Dicta dolorum tempora maxime delectus assumenda quas aliquid eveniet nulla 
-              aperiam explicabo officiis molestiae rerum nisi quod animi rem, totam culpa minima!
+              Comenzamos a escribir una historia allá por el año 2018, historia que aún no termina, pero nos gustaría contar.  
+              Mi nombre es Paola esposa, madre y muy trabajadora, y sobre todas las cosas muy valiente y positiva, siempre con 
+              una sonrisa en mi cara, buscando lo mejor de todo y todos. Confiada en que siempre se puede dar vuelta la página frente a cualquier adversidad.
+              Acompañada por un soñador que me ayuda a volar todos los días. Somos de a dos y para siempre un dúo que se complementa 100%.
+              Así nace para mi LKS impresiones un proyecto familiar, con una impronta muy nuestra, intentando siempre estar a la vanguardia.
+              Mi rol principal es la venta y difusión.
             </p>
           </div>
         </div>
@@ -207,7 +229,7 @@
           </p>
         </div>
 
-        <div class="col-12 p-4 mt-4 d-flex justify-content-center align-items-center box-form">
+        <div class="col-12 mt-4 d-flex justify-content-center align-items-center box-form">
 
           <form id="messageForm">
             <div class="box-level-one d-flex d-row flex-wrap justify-content-around align-items-center">
@@ -257,7 +279,7 @@
   <!--Footer (Augusto)-->
   <footer class="container-fluid">
     <div class="row">
-      <div class="col-12 d-flex d-row flex-wrap justify-content-around align-items-start p-5" style="gap:30px;">
+      <div class="col-12 d-flex d-row flex-wrap justify-content-around align-items-start container-box-footer">
 
         <div class="box-logo d-flex flex-column justify-content-start align-items-start">
           <svg width="144" height="66" viewBox="0 0 144 66" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -319,6 +341,7 @@
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./scripts/navbar.js"></script>
   <script src="./scripts/main.js"></script>
   <script src="./scripts/form.js"></script>
 </body>
