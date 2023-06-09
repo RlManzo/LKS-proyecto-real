@@ -5,7 +5,7 @@ class Producto{
         this.img = img;
         this.info = info;
         this.categoria = categoria;
-        this.cantidad = 1;
+        
       }
     }
 
@@ -23,55 +23,80 @@ const arrayProductos = [producto1, producto2, producto3, producto4, producto5, p
 console.log(arrayProductos)
 const carrito = [];
 const modal = [];
-const contenedorProductos = document.getElementById("contenedorProductos");
 
+//variable(div) donde se pegan los productos
+const cardProductos = document.getElementById("cardsProductos")
 
 //FUNCIONES DE SECCION PRODUCTOS
 
 //funcion para pintar productos en la seccion Productos
-function mostrarProductos(){
-  arrayProductos.forEach(producto =>{
-    const card = document.createElement("div");
-    
-    card.innerHTML =  `
-                      <div class="cardStyles position-relative text-center col-6">
-                         <img class="cardImg" src="${producto.img}" id="detalle${producto.id}" alt="${producto.nombre}" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                           <div class="">
-                            <h5 class="textCard">${producto.nombre}</h5>
-                            <h5 class="card-title h6">${producto.info}</h5>
-                            </div>
-                            <div class="infoCard">
-                            <button class=" botonHeader botonProductos1" id= boton${producto.id}>AGREGAR</button>
-                            <button class="botonHeader botonProductos2" id= boton><a class="" href="https://api.whatsapp.com/send?phone=1131686767&text=Hola!%20Me%20gustaria%20saber%20mas%20%20sobre%20el%20siguiente%20articulo:%0A%0A${producto.nombre}%20Categoria:%0A%0A${producto.info}%0A%0A" target="_blank"</>INFO</button>
-                            
-                            </div>
-                      </div>
-                      `
-    
-    contenedorProductos.appendChild(card);
 
-     const botonCard = document.getElementById(`boton${producto.id}`)
-     const detalleProducto =document.getElementById(`detalle${producto.id}`)
-    
-     detalleProducto.addEventListener("click",()=>{
-      agregarAlModal(producto.id)     
-      mostrarDetalleProducto()
-     })
-     botonCard.addEventListener("click", ()=>{
-      agregarAlCarrito(producto.id)
-      agregarNumeroCarrito()
-      Toastify({
-        text: "Agregaste el producto!",
-        gravity: "top",
-        style: {
-            background: "linear-gradient(247deg, rgba(37,177,86,0.6727065826330532) 0%, rgba(44,205,14,1) 100%)",
-            
-        }
-    }).showToast();
-     })
-
-  })
+//funcion principal para mostrar productos
+function mostrarProducto(){
+  cardProductos.innerHTML = '';
+  categoriaFiltrar.forEach(producto=>{
+  cardSeccion(producto); 
+   })
 }
+
+//funcion plantilla de las cards Productos
+const cardSeccion = (producto)=>{
+  cardProductos.innerHTML +=   
+    `<div class="cardStyles position-relative text-center col-6">
+  <img class="cardImg" src="${producto.img}" id="detalle${producto.id}" onClick="agregarAlModal(${producto.id}),mostrarDetalleProducto()" alt="${producto.nombre}" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    <div class="">
+     <h5 class="textCard">${producto.nombre}</h5>
+     <h5 class="card-title h6">${producto.info}</h5>
+     </div>
+     <div class="infoCard">
+     <button class=" botonHeader botonProductos1" id= boton${producto.id} onClick="agregarAlCarrito(${producto.id},agregarNumeroCarrito())">AGREGAR</button>
+     <button class="botonHeader botonProductos2" id= boton><a class="" href="https://api.whatsapp.com/send?phone=1131686767&text=Hola!%20Me%20gustaria%20saber%20mas%20%20sobre%20el%20siguiente%20articulo:%0A%0A${producto.nombre}%20Categoria:%0A%0A${producto.info}%0A%0A" target="_blank"</>INFO</button>
+     
+     </div>
+</div>`
+    
+} 
+
+//botones filtrar productos
+const botonFiltar1 = document.getElementById("botonProducto1");
+const botonFiltar2 = document.getElementById("botonProducto2");
+const botonFiltar3 = document.getElementById("botonProducto3");
+const botonFiltar4 = document.getElementById("botonProducto4");
+
+//variables para filtrar productos
+const categoriaFiltrar = arrayProductos
+const categoriaFiltrar2 = arrayProductos.filter(producto=> producto.categoria === "sublimable");
+const categoriaFiltrar3 = arrayProductos.filter(producto=> producto.categoria === "vinilo");
+const categoriaFiltrar4 = arrayProductos.filter(producto=> producto.categoria === "dtf");
+
+
+mostrarProducto()
+
+//funciones para filtrar por secciones
+botonFiltar1.addEventListener("click",()=>{
+  mostrarProducto(); 
+   botonFiltar1.className = "selectText:hover"
+   })
+
+ botonFiltar2.addEventListener("click",()=>{
+  cardProductos.innerHTML = '';
+  categoriaFiltrar2.forEach(producto=>{
+cardSeccion(producto)
+
+  });
+ })  
+ botonFiltar3.addEventListener("click",()=>{
+  cardProductos.innerHTML = '';
+  categoriaFiltrar3.forEach(producto=>{
+cardSeccion(producto)
+  });
+ }) 
+ botonFiltar4.addEventListener("click",()=>{
+  cardProductos.innerHTML = '';
+  categoriaFiltrar4.forEach(producto=>{
+cardSeccion(producto)
+  });
+ }) 
 
 //funcion agregar al carrito desde el boton de las cards
 
@@ -85,9 +110,18 @@ function agregarAlCarrito(id){
        carrito.push(nuevoProducto);
       console.log(carrito)
     }
+    Toastify({
+      text: "Agregaste el producto!",
+      gravity: "top",
+      style: {
+          background: "linear-gradient(247deg, rgba(37,177,86,0.6727065826330532) 0%, rgba(44,205,14,1) 100%)",
+          
+      }
+  }).showToast();
+   
 }
 
-mostrarProductos()
+
 
 
 //FUNCIONES DEL DETALLE PRODUCTO(MODAL)
@@ -106,6 +140,7 @@ function agregarAlModal(id){
        modal.push(nuevoProducto);
       console.log(carrito)
     }
+    
 }
   
 
@@ -144,14 +179,7 @@ const botonModal = document.getElementById(`botonModal${producto.id}`);
 botonModal.addEventListener("click",()=>{
   agregarAlCarrito(producto.id)
   agregarNumeroCarrito()
-  Toastify({
-    text: "Agregaste el producto!",
-    gravity: "top",
-    style: {
-        background: "linear-gradient(247deg, rgba(37,177,86,0.6727065826330532) 0%, rgba(44,205,14,1) 100%)",
-        
-    }
-}).showToast();
+ 
 })
 
 const cancelarProducto = document.getElementById("cancelarModal")
@@ -172,7 +200,7 @@ function eliminarProductoModal(id){
   const producto = modal.find(Producto => Producto.id === id);
   const indice = modal.indexOf(producto);
   modal.splice(indice, 1);
-  modal = []
+  
 mostrarDetalleProducto();
 }
 
@@ -228,8 +256,7 @@ botonEliminarProducto.addEventListener("click", ()=>{
   eliminarProducto(producto.id);  
   contador--;
   numeroCarrito.textContent = contador
-  
-     });
+   });
    });
 }
  
@@ -239,8 +266,8 @@ function eliminarProducto(id){
   const producto = carrito.find(Producto => Producto.id === id);
   const indice = carrito.indexOf(producto);
   carrito.splice(indice, 1);
- 
-mostrarCarrito();
+  mostrarCarrito();
+  
 }
 
 //funcion que envia al whatapps la lista del carrito
@@ -284,9 +311,7 @@ const filtrar = () => {
                     
                     `<li class="listStyles">
                        <img class="img1"  src=${producto.img} />
-                        
-                      
-                        <button class="botonProductos1 botonHeader botonBuscador" id= botton${producto.id}><a href="#producto"> ver producto</a></button>    
+                       <button class="botonProductos2 botonHeader botonBuscador" id= botton${producto.id} onClick="agregarAlModal(${producto.id}),mostrarDetalleProducto()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><img class="ojoStyle" src="./assets/ojo.png"/></button>    
                     </li>`
                     busqueda.style.opacity = 1;
                   
@@ -294,8 +319,7 @@ const filtrar = () => {
                     botton.addEventListener("click", () => {
                         agregarAlCarrito(producto.id);
                         
-                    } )
-                  
+                    } );
                  }
               
                if( resultado.innerHTML == '' ){
@@ -310,3 +334,5 @@ const filtrar = () => {
         };
     
 buscador.addEventListener("keyup", filtrar)
+
+
