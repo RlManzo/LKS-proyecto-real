@@ -8,6 +8,8 @@ buttonBurguerNavbar.addEventListener("click", ()=>{
     animacionNavbar()
 })
 
+const tablet = 850;
+
 items.forEach((e) => {
     e.addEventListener("click", () =>{
         setTimeout(() => {
@@ -15,17 +17,22 @@ items.forEach((e) => {
             e.classList.add("all-colour");
             buttonBurguerNavbar.classList.remove("is-active");
             boxNavbar.classList.remove("is-active-navbar");
-            animacionNavbar()
+            if(window.screen.width <= tablet){
+                animacionNavbar()
+            }
         }, 500);
     });
 });
 
 function animacionNavbar(){
-    if(boxNavbar.classList.contains("is-active-navbar")){
-        boxNavbar.classList.remove("fade-out-top");
-        boxNavbar.classList.add("fade-in-top");
-    }else{
-        boxNavbar.classList.remove("fade-in-top");
-        boxNavbar.classList.add("fade-out-top");
+    if(window.screen.width <= tablet){
+        if(boxNavbar.classList.contains("is-active-navbar")){
+            boxNavbar.classList.remove("fade-out-top");
+            boxNavbar.classList.add("fade-in-top");
+        }else{
+            boxNavbar.classList.remove("fade-in-top");
+            boxNavbar.classList.add("fade-out-top");
+        }
     }
+    
 }
