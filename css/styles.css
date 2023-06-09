@@ -169,7 +169,10 @@ nav{
     width: 398px;
     height: 413.67px;
 }
-
+.ojoStyle{
+    width: 40px;
+    color: white;
+}
 /*Main*/
 
 /* Modal*/
@@ -259,6 +262,9 @@ nav{
 .selectText:hover{
     color: var(--celeste);
     text-decoration: underline;
+}
+.cambiaColor{
+    color: green;
 }
 .divProductos{
     display: grid;
@@ -700,10 +706,13 @@ footer{
     margin-left: 60px;
 }
 .botonBuscador{
-    margin-left: 90px;
+    margin-left: 110px;
     position: relative;
-    padding-right: 7px;
-    padding-left: 11px;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 75px;
+    height: 40px;
+    border-radius: 50px;
 
 }
 

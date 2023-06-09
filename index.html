@@ -50,6 +50,7 @@
             </svg>
           </button>
           <p id="numeroCarrito" class="numeroCarrito">0</p>
+<<<<<<< HEAD
           
 
           <button class="hamburger hamburger--spring" type="button" id="burgerNavbar">
@@ -59,6 +60,9 @@
           </button>
           
         </div>
+=======
+          </div>
+>>>>>>> productos
 
       </div>
     </div>
@@ -79,7 +83,7 @@
               </div>  
             </div>
             <div class="modal-footer">   
-              <button class="text-center botonHeader" id="mandarCarrito">Pedir presupuesto</button>
+              <button class="text-center botonHeader" id="mandarCarrito" >Pedir presupuesto</button>
             </div>
           </div>
         </div>
@@ -142,6 +146,22 @@
         <section>
           <!--carousel de imagenes -->
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <!--
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                <img src="./assets/carrusel1.svg" alt="">
+                              
+            </button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2">
+                <img src="./assets/carrusel2.svg" alt="">
+              </button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3">
+                <img src="./assets/carrusel3.svg" alt="">
+              </button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3">
+                <img src="./assets/carrusel4.svg" alt="">
+              </button>
+            </div>-->
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="./assets/texttil.png" class="d-block w-100" alt="vinilo Textil">
@@ -170,8 +190,8 @@
           <div class="d-flex selectStyles">
             <h5 class="selectText" id="botonProducto1">TODOS LOS PRODUCTOS</h5>
             <h5 class="selectText" id="botonProducto2">LKS STYLE</h5>
-            <h5 class="selectText">TIPO DE SERVICIOS</h5>
-            <h5 class="selectText">PERSONALIZA TU IDEA</h5>
+            <h5 class="selectText" id="botonProducto3">TIPO DE SERVICIOS</h5>
+            <h5 class="selectText" id="botonProducto4">PERSONALIZA TU IDEA</h5>
             
           </div>
           
@@ -192,8 +212,10 @@
   </div>
 </div>
           
-<div id="contenedorProductos" class="divProductos">
+<div id="contenedorProductos" >
               <!--cards de productos-->
+              <div id="cardsProductos" class="divProductos"></div>
+             
 </div>
         </div>
       </section>
