@@ -76,6 +76,9 @@ nav{
 .menu-items .all:hover{
     color: var(--celeste);
 }
+.container-cart{
+    position: relative;
+}
 .carrito{
     width: 15%;
 }
@@ -240,6 +243,117 @@ nav{
 .controlesCarrousel{
     width: 1350px;
 }
+/*Carousel*/
+.buttons {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border: 1.5px dashed var(--celeste);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.box-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.box-button p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 106.3%;
+    text-align: center;
+    color: #1C2D46;
+    margin: 0 !important;
+}
+.carousel-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #45ACB4;
+}
+.carousel-button.active{
+    background-color: #1C2D46;
+}
+.vinilos{
+    width: 29.8px ;
+    height:44.38px ;
+}
+.sublimacion{
+    width: 48.8px;
+    height: 37.06px;
+}
+.DTF{
+    width: 39.58px;
+    height: 42.59px;
+}
+.serigrafia{
+    width: 46.73px;
+    height: 44.3px;
+}
+.carousel {
+    width: 100%;
+    height: 540px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 0 0;
+    background-color: var(--azul);
+}
+  
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    display: none;
+    transition: 3s;
+}
+.carousel-image img{
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+  
+.carousel-image.active {
+    transition: 3s;
+    display: block;
+    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+}
+@keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+}
+  
+  
 
 /*seccion nuestros productos*/
 .productosTitle{
@@ -724,6 +838,14 @@ footer{
     border-radius: 50%;
     position: absolute;
     margin-left: 50px;
+    top: 10%;
+    right: -12px;
+    font-size: 12px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .buscadorContainer{
     position: absolute;
@@ -881,11 +1003,43 @@ a.botonPresupuesto{
         justify-content: center;
         margin-bottom: 50px;
     }
-.productosTitle{
-    width: 100%;
-}
+    .productosTitle{
+        width: 100%;
+    }
+    .carousel {
+        height: 450px !important;
+    }
 }
 @media only screen and ( max-width: 850px){
+    .carousel {
+        height: 350px !important;
+    }
+    .carousel-button {
+        width: 60px !important;
+        height: 60px !important;
+    }
+    .box-button {
+        gap: 12px !important;
+    }
+    .box-button p {
+        font-size: 12px !important;
+    }
+    .vinilos {
+        width: 22.8px !important;
+        height: 32.38px !important;
+    }
+    .sublimacion {
+        width: 35.8px !important;
+        height: 27.06px !important;
+    }
+    .DTF {
+        width: 29.58px !important;
+        height: 32.59px !important;
+    }
+    .serigrafia {
+      width: 36.73px !important;
+      height: 34.3px !important;
+    }
     .carrito {
         width: 130px;
         justify-content: space-between !important;
@@ -1096,6 +1250,9 @@ a.botonPresupuesto{
         margin-left: 289px;
     }
 @media only screen and ( max-width: 576px){
+    .carousel {
+        height: 250px !important;
+    }
     nav{
         height: 100px !important;
     }
@@ -1125,6 +1282,7 @@ a.botonPresupuesto{
     }
     .iconInput {
         left: 450px !important;
+        top: 135px !important;
     }
     .nosotros .box-p p {
         width: 100% !important;
@@ -1209,15 +1367,46 @@ a.botonPresupuesto{
     
     
 }
-@media only screen and ( max-width: 400px){
+@media only screen and ( max-width: 450px){
+    .carousel {
+        height: 200px !important;
+    }
+    .carousel-button {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .vinilos {
+        width: 18.8px !important;
+        height: 28.38px !important;
+    }
+    .sublimacion {
+        width: 29.8px !important;
+        height: 22.06px !important;
+    }
+    .DTF {
+        width: 25.58px !important;
+        height: 29.59px !important;
+    }
+    .serigrafia {
+        width: 30.73px !important;
+        height: 30.3px !important;
+    }
     .menu-items {
         gap: 60px !important;
+        justify-content: flex-start !important;
     }
     .menu-items .all {
         font-size: 1.5rem !important;
     }
+    .sm-mini-phone{
+        margin-top: 60px;
+    }
     .selectStyles{
         flex-direction: column;
+    }
+    .iconInput {
+        left: 320px !important;
+        top: 135px;
     }
 }
 }
