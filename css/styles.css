@@ -225,6 +225,10 @@ nav{
         outline: 0;
     
 }
+.modalTextoCarrito{
+    border-bottom:1.5px dashed var(--celeste);
+    
+}
 .img1{
     position: absolute;
     width: 65px;
@@ -237,9 +241,13 @@ nav{
 .titleCards{
     position: relative;
     margin-left: 77px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+    
 }
-
+.carritoContainer{
+    margin-top: 10px;
+    border-bottom:1.5px dashed var(--celeste) ;
+}
 .controlesCarrousel{
     width: 1350px;
 }
@@ -358,8 +366,9 @@ nav{
 /*seccion nuestros productos*/
 .productosTitle{
     margin-top: 50px;
-    width: 750px;
-    width: 70%;
+    width: 600px;
+   margin-left: 140px;
+    
 }
 .selectStyles{
     gap: 1rem;
@@ -373,7 +382,7 @@ nav{
 }
 
 .selectText:hover{
-    color: var(--celeste);
+    color: var(--ladrillo);
     text-decoration-line: overline;
     text-decoration: underline;
     
@@ -396,9 +405,11 @@ nav{
 }
 .cardImg{
     width: 260px;
+    height: 220px;
     border-radius: 10px;
     border-color: var(--celeste);
     cursor: pointer;
+    border: 1.5px solid var(--celeste);
 }
 .infoCard{
    display: flex;
@@ -442,44 +453,53 @@ nav{
         height: 35px;
         margin-top: 10px;
         border-radius: 13px;
-          
+        font-weight: 500;
 }
-.botonProductos2{
-    padding-right: 110px;
-    padding-left: 20px;
-    width: 120px;
-    background-color: #B5DCDA;
-     height: 35px;
-    color: white;
-    margin-top: 10px;
-    border-radius: 13px;
-}
-.botonProductos2:hover{
-    background-color: #1C2D46;
+.botonProductos1:hover{
+    color: #1C2D46;
 
 }
+.botonProductos2{
+  
+    width: 120px;
+    padding-right: 20px;
+    
+    background-color: #B5DCDA;
+     height: 35px;
+    margin-top: 10px;
+    border-radius: 13px;
+    font-weight: 500;
+}
+
 .iconoWhatapps{
     position: absolute;
-    margin-left: 35px;
+    margin-left: 76px;
     margin-bottom: 20px;
-    color: #1C2D46;
+    color: white;
+    width: 20px;
 }
 a.botonInfo{
-    color: white;
+    color: #1C2D46;
     align-self:center;
+    font-weight: 500;
 }
+
 
 /*Modal Productos*/
 .modal{
     --bs-modal-width: 741px;
 }
+
 .imgModal{
     width: 345px;
+    height: 300px;
     border-radius: 15px;
     border-color: var(--celeste);
     margin-bottom: 30px;
     position: relative;
     margin-left: -40px;
+    
+    border: 1.5px solid var(--celeste);
 }
 .imgModalDetail{
     width: 50px;
@@ -494,7 +514,7 @@ a.botonInfo{
     position: relative;
     display: flex;
    justify-content: center;
-    margin-left: 135px;
+    margin-left: 145px;
     margin-top: 20px;
 }
 
@@ -503,27 +523,31 @@ a.botonInfo{
     margin-left: 193px;
     margin-right: 38px;
     margin-top: 22px;
+    display: flex;
+    justify-self: left;
 }
 .botonesDetalleModal{
     position: absolute;
     margin-left: 215px;
-    margin-top: 156px;
+    margin-top: 105px;
     font-size: 15px;
+    border-radius: 15px;
 }
 .botonDetalle1{
     width: 119px;
     height: 33px;
     margin-right: 15px;
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 .botonDetalle2{
     width: 119px;
     height: 33px;
     margin-right: 15px;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #B5DCDA;
-    color: #45ACB4;
+    color: #1C2D46;
+    font-weight: 600;
 }
 .botonDetalle2:hover{
      color: white;
@@ -997,14 +1021,15 @@ a.botonPresupuesto{
         margin: 0 0 10px 0 !important;
     }
     .divProductos{
-        display: grid;
-        grid-template-columns: repeat(2, 300px);
-        grid-template-rows: repeat(6, 400px);
-        justify-content: center;
-        margin-bottom: 50px;
+        display: grid !important;
+        grid-template-columns: repeat(2, 300px) !important;
+        grid-template-rows: repeat(6, 400px) !important;
+        justify-content: center !important;
+        margin-bottom: 50px !important;
     }
     .productosTitle{
-        width: 100%;
+        width: 500px !important;
+        margin-left:120px !important;
     }
     .carousel {
         height: 450px !important;
@@ -1190,64 +1215,75 @@ a.botonPresupuesto{
     .box-son-level-one select {
         width: 220px !important;
     }
+    
+    .productosTitle{
+        width: 500px !important;
+        margin-left:120px !important;
+    }
     .divProductos{
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
     }
     .infoCard{
-        display: flex;
-        justify-content: center;
-        flex-direction: column-reverse;
-        align-items: center;
+        display: flex !important;
+        justify-content: center !important;
+        flex-direction: column-reverse !important;
+        align-items: center !important;
         
     }
     .selectStyles{
-        display: flex;
-        flex-wrap: wrap;
+        display: flex !important;
+        flex-wrap: wrap !important;
         
     }
     .botonProductos2{
-        width: 250px;
-        margin-bottom: 10px;
-        padding-left: 60px;
-        border-color: var(--celeste);
-        
+        width: 250px !important;
+        margin-bottom: 10px !important;
+        padding-left: 10px !important;
+        border-color: var(--celeste) !important;
+        position: absolute !important;
+        margin-top: 316px !important;
+        margin-left: -30px !important;
     }
     .botonProductos1{
-        width: 250px;
-        margin-right: 0px;
-        padding-left: 80px;
+        width: 250px !important;
+        margin-right: 0px !important;
+        padding-left: 80px !important;
+        margin-bottom: 30px !important;
     }
     .imgModal{
-        width: 305px;
-        margin-left: -21px;
+        width: 345px !important;
+        margin-left: 34px !important;
     }
     .textModalProducto{
-        justify-content: flex-start;
-        margin-left: 25px;
-        margin-top: 0px;
+        justify-content: flex-start !important;
+        margin-left: 37px !important;
+        margin-top: 0px !important;
     }
     .textDescriptionModal{
-        margin-left: 5px;
-        margin-top: 10px;
-        margin-bottom: 100px;
+        margin-left: 22px !important;
+        margin-top: 10px !important;
+        margin-bottom: 100px !important;
     }
     .botonesDetalleModal{
-        margin-top: -35px;
-        margin-left: 37px;
+        margin-top: -35px !important;
+        margin-left: 37px !important;
     }
     .imgModalDetail{
-        position:absolute;
-        margin-left: 30px;
+        position:absolute !important;
+        margin-left: 30px !important;
     }
     .closeModal{
-        margin-left: 340px;
+        margin-left: 416px !important;
+    }
+    .btn-close{
+        color: #EA5534;
     }
     .modalContainer{
-        left: -8px;
+        left: -8px !important;
     }
     .botonEliminar{
-        margin-left: 289px;
+        margin-left: 289px !important;
     }
 @media only screen and ( max-width: 576px){
     .carousel {
@@ -1364,7 +1400,10 @@ a.botonPresupuesto{
     .derechos h6 {
         font-size: 11px;
     }
-    
+    .productosTitle{
+        width: 100% !important;
+        margin-left: 0px !important;
+    }
     
 }
 @media only screen and ( max-width: 450px){
@@ -1402,11 +1441,15 @@ a.botonPresupuesto{
         margin-top: 60px;
     }
     .selectStyles{
-        flex-direction: column;
+        flex-direction: column !important;
     }
     .iconInput {
         left: 320px !important;
         top: 135px;
     }
+    .productosTitle{
+        margin-left: 0px !important;
+    }
 }
 }
+

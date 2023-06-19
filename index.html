@@ -70,7 +70,7 @@
     <div class="fade modalContainer justify-content-end d-row" id="ventanaModal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
         <div class="modal-dialog">
           <div class="modal-content modalColor">
-            <div class="modal-header">
+            <div class="modal-header modalTextoCarrito">
               <h5 class="modal-title modalTitulo" id="modalTitle">CARRITO DE PRESUPUESTO</h5>
              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
             </div>
@@ -177,18 +177,26 @@
       </section>
 
       <!--seccion productos-->
-      <section class="col-12" id="producto">
-        <div class="container text-center">
-          <img class="productosTitle" src="./assets/nuestrosProductos.png" alt="">
-          <br>
-          <div class="d-flex selectStyles">
-            <h5 class="selectText" id="botonProducto1">TODOS LOS PRODUCTOS</h5>
-            <h5 class="selectText" id="botonProducto2">LKS STYLE</h5>
-            <h5 class="selectText" id="botonProducto3">TIPO DE SERVICIOS</h5>
-            <h5 class="selectText" id="botonProducto4">PERSONALIZA TU IDEA</h5>
-            
+        <section class="col-12 d-flex flex-column justify-content-center align-items-center" id="producto">
+          <div class="box-title-contact text-center d-flex justify-content-center align-items-center">
+            <h4 data-aos="fade-up">Nuestros Productos</h4><img src="./assets/iconoHeader.svg" alt="icono" data-aos="zoom-in">
           </div>
           
+        <div class="">
+          <img class="productosTitle" src="./assets/nuestrosProductos.png" alt="" data-aos="fade-up">
+          
+          <div class="d-flex selectStyles text-center" data-aos="fade-right">
+            <h5 class="selectText all" id="botonProducto1">TODOS LOS PRODUCTOS</h5>
+            <h5 class="selectText all" id="botonProducto2">LKS STYLE</h5>
+            <h5 class="selectText all" id="botonProducto3">TIPO DE SERVICIOS</h5>
+            <h5 class="selectText all" id="botonProducto4">PERSONALIZA TU IDEA</h5>
+            
+          </div>
+          <div id="contenedorProductos" >
+              <!--cards de productos-->
+              <div id="cardsProductos" class="divProductos" data-aos="fade-right"></div>
+          </div>
+        </div>
 
 
 <!-- Modal -->
@@ -206,12 +214,7 @@
   </div>
 </div>
           
-<div id="contenedorProductos" >
-              <!--cards de productos-->
-              <div id="cardsProductos" class="divProductos"></div>
-             
-</div>
-        </div>
+
       </section>
      <br>
 
