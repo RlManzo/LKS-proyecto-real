@@ -178,7 +178,7 @@ nav{
 }
 /*Main*/
 
-/* Modal*/
+/* Modal carrito*/
 .modalColor{
     border: none;
     box-shadow: 0px 1px 7px #45ACB4;
@@ -191,9 +191,83 @@ nav{
    
     
 }
+.botonCarrito{
+    background: none;
+    border: none;
+}
+.numeroCarrito{
+    color: white;
+    padding: 5px;
+    background-color: var(--ladrillo);
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 50px;
+    top: 10%;
+    right: -12px;
+    font-size: 12px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buscadorContainer{
+    position: absolute;
+    padding-right: 50px;
+    padding-left: 20px;
+    margin-left: 60px;
+}
+.botonBuscador{
+    margin-left: 110px;
+    
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 75px;
+    height: 40px;
+    border-radius: 50px;
+    margin-top: 0px;
+    background-color: #B5DCDA;
+    border: transparent;
+}
+.botonBuscador:hover{
+    background-color: var(--celeste);
+}
+.textBuscador{
+    margin-left: 60px;
+    padding-left: 20px;
+    padding-right: 50px;
+    display: block;
+    margin-top: -13px;
 
+}
+.botonPresupuesto{
+    text-decoration: none;
+    color: white;
+}
+a.botonPresupuesto{
+    color: white;
+}
+.listStyles{
+   margin-bottom: 35px;
+   list-style-type: none;
+   margin-top: 30px;
+}
+.textCantidad{
+    margin-top: 8px;
+}
+.buttonCantidad{
+    margin-top: 8px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--celeste);
+    color: var(--azul);
+    border: transparent;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+}
 .modalContainer{
-  
         --bs-modal-zindex: 1055;
         --bs-modal-width: 450px;
         --bs-modal-padding: 1rem;
@@ -231,8 +305,9 @@ nav{
 }
 .img1{
     position: absolute;
-    width: 65px;
+    width: 77px;
     margin-bottom: 30px;
+    margin-left: -8px;
     
 }
 .cardCarrito{
@@ -241,7 +316,7 @@ nav{
 .titleCards{
     position: relative;
     margin-left: 77px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     
 }
 .carritoContainer{
@@ -406,6 +481,7 @@ nav{
 .cardImg{
     width: 260px;
     height: 220px;
+    
     border-radius: 10px;
     border-color: var(--celeste);
     cursor: pointer;
@@ -475,6 +551,7 @@ nav{
     position: absolute;
     margin-left: 76px;
     margin-bottom: 20px;
+    
     color: white;
     width: 20px;
 }
@@ -487,49 +564,102 @@ a.botonInfo{
 
 /*Modal Productos*/
 .modal{
-    --bs-modal-width: 741px;
+    --bs-modal-width: 820px;
 }
 
 .imgModal{
     width: 345px;
-    height: 300px;
+    height: 330px;
     border-radius: 15px;
     border-color: var(--celeste);
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     position: relative;
-    margin-left: -40px;
-    
+    margin-left: -12px;
+    margin-right: 50px;
     border: 1.5px solid var(--celeste);
+    
 }
+
 .imgModalDetail{
-    width: 50px;
+    width: 83px;
     display: flex;
     margin-bottom: 20px;
     margin-left: 10px;
     margin-top: 10px;
-    
- 
+    cursor: pointer;
+    transition: all   0.50s ease-in-out;
+}
+.imgModalDetail:hover{
+    transform: scale(1.2);
+    position: absolute;
+    border: 1px solid var(--celeste);
+    border-radius: 5px;
 }
 .textModalProducto{
     position: relative;
     display: flex;
    justify-content: center;
-    margin-left: 145px;
-    margin-top: 20px;
+    margin-left: 75px;
+    margin-top: 5px;
+    font-size: larger;
+    
 }
-
+.buttonCategoria{
+    margin-top: 22px;
+    margin-left: 50px;
+}
+.modalCategoria{
+    border-radius: 15px;
+    width: 90px;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    border-color: var(--celeste);
+    background-color: transparent;
+    border: 1px solid var(--celeste);
+    cursor: none;
+}
 .textDescriptionModal{
     font-size: 12px;
-    margin-left: 193px;
-    margin-right: 38px;
-    margin-top: 22px;
+    margin-left: 220px;
+    margin-right: 73px;
+    margin-top: 15px;
     display: flex;
     justify-self: left;
 }
+.caracteristicaColor{
+    margin-left: 20px;
+}
+.colorModal1{
+    width: 25px;
+    background-color: #EA5534;
+    border-radius: 50%;
+    
+    color: transparent;
+    border: transparent;
+}
+.colorModal2{
+    width: 25px;
+    background-color:#1C2D46;
+    border-radius: 50%;
+   margin-left: 5px;
+    color: transparent;
+    border: transparent;
+}
+.colorModal3{
+    width: 25px;
+    background-color: var(--celeste);
+    border-radius: 50%;
+    margin-left: 5px;
+    color: transparent;
+    border: transparent;
+}
+
 .botonesDetalleModal{
     position: absolute;
-    margin-left: 215px;
-    margin-top: 105px;
+    margin-left: 270px;
+    margin-top: 70px;
     font-size: 15px;
     border-radius: 15px;
 }
@@ -554,7 +684,7 @@ a.botonInfo{
 }
 .closeModal{
     position: relative;
-    margin-left: 700px;
+    margin-left: 770px;
     margin-top: 10px;
     color: var(--ladrillo);
 }
@@ -848,66 +978,6 @@ footer{
 
 
 
-
-
-/*luego acomodas esto en el orden que corresponda*/
-.botonCarrito{
-    background: none;
-    border: none;
-}
-.numeroCarrito{
-    color: white;
-    padding: 5px;
-    background-color: var(--ladrillo);
-    border-radius: 50%;
-    position: absolute;
-    margin-left: 50px;
-    top: 10%;
-    right: -12px;
-    font-size: 12px;
-    width: 22px;
-    height: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.buscadorContainer{
-    position: absolute;
-    padding-right: 50px;
-    padding-left: 20px;
-    margin-left: 60px;
-}
-.botonBuscador{
-    margin-left: 110px;
-    
-    padding-right: 0px;
-    padding-left: 0px;
-    width: 75px;
-    height: 40px;
-    border-radius: 50px;
-    margin-top: 0px;
-
-}
-.textBuscador{
-    margin-left: 60px;
-    padding-left: 20px;
-    padding-right: 50px;
-    display: block;
-    margin-top: -13px;
-
-}
-.botonPresupuesto{
-    text-decoration: none;
-    color: white;
-}
-a.botonPresupuesto{
-    color: white;
-}
-.listStyles{
-   margin-bottom: 35px;
-   list-style-type: none;
-   margin-top: 20px;
-}
 /*Animate*/
 .fade-out-top {
 	-webkit-animation: fade-out-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -1034,7 +1104,23 @@ a.botonPresupuesto{
     .carousel {
         height: 450px !important;
     }
-}
+    .modalContainer{
+        left: 30px !important;
+    }
+    .botonBuscador{
+        margin-left: 110px !important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+        width: 75px !important;
+        height: 40px !important;
+        border-radius: 50px !important;
+        margin-top: 0px !important;
+    
+    }
+    .iconInput{
+        left: 285px !important;
+        top: 177px !important;
+    }
 @media only screen and ( max-width: 850px){
     .carousel {
         height: 350px !important;
@@ -1147,10 +1233,14 @@ a.botonPresupuesto{
         left: 0px !important;
         border-radius: 16px !important;
       }
+      .buscadorContainer{
+        margin-top: 40px;
+    }
+}
     .iconInput {
-        position: absolute;
-        left: 570px;
-        top: 162px;
+        position: absolute !important;
+        left: 450px !important;
+        top: 162px !important;
     }
     .container-texto a {
         margin: 0 0 30px 0 !important;
@@ -1182,7 +1272,10 @@ a.botonPresupuesto{
     .box-son-level-two {
         width: 95% !important;
     }
-
+    .modalContainer{
+        left: 30px !important;
+    }
+    
 }
 @media only screen and ( max-width: 768px){
     .box-personas-nosotros {
@@ -1251,9 +1344,12 @@ a.botonPresupuesto{
         padding-left: 80px !important;
         margin-bottom: 30px !important;
     }
+    
     .imgModal{
         width: 345px !important;
-        margin-left: 34px !important;
+        margin-left: 185px !important;
+        position: absolute;
+        margin-top: -356px;
     }
     .textModalProducto{
         justify-content: flex-start !important;
@@ -1263,18 +1359,27 @@ a.botonPresupuesto{
     .textDescriptionModal{
         margin-left: 22px !important;
         margin-top: 10px !important;
-        margin-bottom: 100px !important;
+        margin-bottom: 25px !important;
+    }
+    .caracteristicaColor{
+       margin-left: -173px !important;
     }
     .botonesDetalleModal{
-        margin-top: -35px !important;
-        margin-left: 37px !important;
+        margin-top: -50px !important;
+        margin-left: 325px !important;
+        position: absolute;
+        
+    }
+    .buttonCategoria{
+        margin-left: -150px;
     }
     .imgModalDetail{
-        position:absolute !important;
+        position:relative !important;
         margin-left: 30px !important;
+        margin-right: 0px;
     }
     .closeModal{
-        margin-left: 416px !important;
+        margin-left: 15px !important;
     }
     .btn-close{
         color: #EA5534;
@@ -1284,6 +1389,13 @@ a.botonPresupuesto{
     }
     .botonEliminar{
         margin-left: 289px !important;
+    }
+    .modalCategoria{
+        font-size: smaller;
+        width: 77px;
+    }
+    .buscadorContainer{
+        margin-top: 40px;
     }
 @media only screen and ( max-width: 576px){
     .carousel {
@@ -1317,7 +1429,7 @@ a.botonPresupuesto{
         width: 90% !important;
     }
     .iconInput {
-        left: 450px !important;
+        left: 400px !important;
         top: 135px !important;
     }
     .nosotros .box-p p {
@@ -1404,7 +1516,28 @@ a.botonPresupuesto{
         width: 100% !important;
         margin-left: 0px !important;
     }
-    
+    .imgModal{
+        width: 460px !important;
+        margin-left: 0px !important;
+        margin-bottom: 20px;
+    }
+    .buttonCategoria{
+        margin-bottom: 20px !important;
+        margin-top: 19px !important;
+        margin-left: -72px !important;
+    }
+    .caracteristicaColor{
+        margin-left: -172px !important;
+    }
+    .buttonCategoria{
+        margin-left: -150px !important;
+    }
+    .botonesDetalleModal{
+        margin-top: -70px !important;
+        margin-left: 240px !important;
+        position: absolute;
+        
+    }
 }
 @media only screen and ( max-width: 450px){
     .carousel {
@@ -1444,11 +1577,39 @@ a.botonPresupuesto{
         flex-direction: column !important;
     }
     .iconInput {
-        left: 320px !important;
-        top: 135px;
+        left: 210px !important;
+        top: 135px !important;
     }
     .productosTitle{
         margin-left: 0px !important;
+    }
+    .imgModal{
+        width: 340px !important;
+    }
+    .caracteristicaColor{
+        margin-left: -103px !important;
+        margin-top: 0px !important;
+    }
+    .buttonCategoria{
+        margin-left: -84px !important;
+        margin-bottom: 41px !important;
+        
+    }
+    .botonesDetalleModal{
+       margin-top: -23px !important;
+       margin-left: 60px !important;
+    }
+    .textBuscador{
+        padding-right: 25px;
+    }
+    .botonBuscador{
+        margin-left: 106px;
+        background-color: var(--celeste);
+        cursor: pointer;
+    }
+    .buscadorContainer{
+        margin-top: 38px;
+        margin-left: 28px;
     }
 }
 }

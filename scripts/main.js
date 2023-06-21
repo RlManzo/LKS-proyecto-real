@@ -5,7 +5,7 @@ class Producto{
         this.img = img;
         this.info = info;
         this.categoria = categoria;
-        
+        this.cantidad = 1;
       }
     }
 
@@ -75,7 +75,7 @@ mostrarProducto()
 //funciones para filtrar por secciones
 botonFiltar1.addEventListener("click",()=>{
   mostrarProducto(); 
-   botonFiltar1.className = "selectText:hover"
+   botonFiltar1.classList.add("selectText:hover")
    })
 
  botonFiltar2.addEventListener("click",()=>{
@@ -149,7 +149,6 @@ function mostrarDetalleProducto(){
   contenedorDetalleProducto.innerHTML = "";
     modal.forEach(producto => {
     const card = document.createElement("div"); 
-    
     innerHTML = `${producto.nombre} ${producto.precio}`
     card.innerHTML =  `
                       <div class="row g-0 data-aos="fade-right"">
@@ -160,13 +159,28 @@ function mostrarDetalleProducto(){
                         <img src="${producto.img}" class="imgModalDetail card-img-top" alt="${producto.nombre}">
                         </div>
                         <div class="col-md-2">
-                         <img src="${producto.img}" class="imgModal card-img-top" alt="${producto.nombre}">
+                         <img id="imageModal" src="${producto.img}" class="imgModal card-img-top" alt="${producto.nombre}" onClick="()=>{imgModal.classlist.add(imgModal:hover)} ">
+                         
                          </div>
                          <div class=" col-md-8">
                             <div className="card-body text-center .col-md-4 .ms-auto ">
                             <h5 class="h3  card-title textModalProducto">${producto.nombre}</h5>
                             
-                            <h6 class=" text-end h8 textDescriptionModal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta fugit vero dicta nisi, dolorem harum cumque excepturi a. Quod omnis soluta distinctio adipisci eum! Sit facilis repellat commodi tempore? </h6>
+                            <h6 class=" text-end h8 textDescriptionModal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta fugit vero dicta nisi, dolorem harum cumque excepturi a. </h6>
+                            <div class="container text-center caracteristicaColor">
+                            <h6 class="h8">Color producto:</h6>
+                            <button class="colorModal1">1</button>
+                            <button class="colorModal2">1</button>
+                            <button class="colorModal3">1</button>
+                            </div>
+                            <div class="container text-center buttonCategoria">
+                            <button class="modalCategoria">300ml</button>
+                            <button class="modalCategoria">500ml</button>
+                            </div>
+                            <div class="container text-center buttonCategoria">
+                            <button class="modalCategoria">${producto.categoria} </button>
+                            <button class="modalCategoria">${producto.categoria} </button>
+                            </div>
                                <div class="d-flex botonesDetalleModal">
                                   <button class="text-center botonHeader botonDetalle1" id="botonModal${producto.id}">AGREGAR</button>
                                   <button class="text-center botonHeader botonDetalle2" data-bs-dismiss="modal" aria-label="Close" id="cancelarModal">CANCELAR</Button>
@@ -183,6 +197,7 @@ botonModal.addEventListener("click",()=>{
   agregarNumeroCarrito()
  
 })
+
 
 const cancelarProducto = document.getElementById("cancelarModal")
 cancelarProducto.addEventListener("click",()=>{
@@ -207,6 +222,7 @@ mostrarDetalleProducto();
 }
 
 
+
 //FUNCIONES DEL CARRITO
 
 
@@ -225,13 +241,12 @@ function agregarNumeroCarrito(){
   numeroCarrito.textContent = contador
   
 }
-
+const textoCarrito = document.getElementById("textoCarrito")
 //funcion productos en el carrito
 function mostrarCarrito(){
       contenedorCarrito.innerHTML = "";
       carrito.forEach(producto => {
-        const card = document.createElement("div");
-        card.classList.add( "col-xl-3", "col-md-6", "col-xs-12");
+        textoCarrito.innerHTML ="";
         innerHTML = `${producto.nombre} ${producto.precio}`
         contenedorCarrito.innerHTML +=  `
                           <div class="container carritoContainer">
@@ -245,22 +260,25 @@ function mostrarCarrito(){
                           
                           <div class="titleCards ">
                           <h5 class="h6">${producto.nombre}</h5>
-                          <h6 class="h8">${producto.categoria}</h>
+                          <h8 class="h8">${producto.categoria}</h>
+                          <div class="d-flex">
+                          <button class="buttonCantidad">-</button>
+                          <p class="textCantidad">
+                          ${producto.cantidad}
+                          </p>
+                          <button class="buttonCantidad" id="botonMas" >+</button>
+                          </div>
                           </div>
                                          
           </div>
        `
 
-contenedorCarrito.appendChild(card);
- /*     
-const botonEliminarProducto = document.getElementById(`eliminar${producto.id}`)
-botonEliminarProducto.addEventListener("click", ()=>{
-  eliminarProducto(producto.id);  
-  contador--;
-  
-   });*/
-   });
+
 }
+      )
+      }
+ 
+
  
 //funcion eliminar producto del carrito
 
@@ -288,12 +306,8 @@ const sendcarrito = () => {
       cantidad = Producto.precio * Producto.cantidad 
   })
   
-  
-  
-  mandarCarrito.innerHTML = ` <button class="text-center botonHeader"" ><a class="botonPresupuesto" href="https://api.whatsapp.com/send?phone=1131686767&text=Hola!%20Me%20gustaria%20hacer%20el%20siguiente%20pedido:%0A%0A${totalCompra}%0A%0A" target="_blank"</>Pedir Presupuesto</button>`
-  
-   
-  
+  mandarCarrito.innerHTML = ` <button class="text-center botonHeader"" ><a class="botonPresupuesto" href="https://api.whatsapp.com/send?phone=543513721017&text=Hola!%20Me%20gustaria%20hacer%20el%20siguiente%20pedido:%0A%0A${totalCompra}%0A%0A" target="_blank"</>Pedir Presupuesto</button>`
+    
 }
 
 //BUSCADOR
@@ -317,7 +331,7 @@ const filtrar = () => {
                        <div>
                        <h6 class="textBuscador">${producto.nombre}</h5>
                        </div>
-                       <button class="botonProductos2 botonHeader botonBuscador" id= botton${producto.id} onClick="agregarAlModal(${producto.id}),mostrarDetalleProducto()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><img class="ojoStyle" src="./assets/ojo.png"/></button>    
+                       <button class=" botonBuscador" id= "botton${producto.id}" onClick="agregarAlModal(${producto.id}),mostrarDetalleProducto()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><img class="ojoStyle" src="./assets/ojo.png"/></button>    
                     </li>`
                     busqueda.style.opacity = 1;
                   
