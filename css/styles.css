@@ -1517,7 +1517,7 @@ footer{
         margin-left: 0px !important;
     }
     .imgModal{
-        width: 460px !important;
+        width: 440px !important;
         margin-left: 0px !important;
         margin-bottom: 20px;
     }
@@ -1527,14 +1527,15 @@ footer{
         margin-left: -72px !important;
     }
     .caracteristicaColor{
-        margin-left: -172px !important;
+        margin-left: -125px !important;
     }
     .buttonCategoria{
-        margin-left: -150px !important;
+        margin-left: -120px !important;
+        margin-bottom: 40px !important;
     }
     .botonesDetalleModal{
-        margin-top: -70px !important;
-        margin-left: 240px !important;
+        margin-top: -27px !important;
+        margin-left: 194px !important;
         position: absolute;
         
     }
@@ -1584,14 +1585,14 @@ footer{
         margin-left: 0px !important;
     }
     .imgModal{
-        width: 340px !important;
+        width: 320px !important;
     }
     .caracteristicaColor{
-        margin-left: -103px !important;
+        margin-left: -88px !important;
         margin-top: 0px !important;
     }
     .buttonCategoria{
-        margin-left: -84px !important;
+        margin-left: -70px !important;
         margin-bottom: 41px !important;
         
     }
