@@ -96,6 +96,7 @@ nav{
     width: 227px;
     height: 33px;
     left: 80px;
+    padding-left: 10px;
     background: rgba(252, 231, 219, 0.4);
     border: 1px solid #45ACB4;
     border-radius: 8px;
@@ -213,13 +214,12 @@ nav{
 }
 .buscadorContainer{
     position: absolute;
-    padding-right: 50px;
-    padding-left: 20px;
+    padding-left: 23px;
     margin-left: 60px;
+    padding-right: 35px;
 }
 .botonBuscador{
-    margin-left: 110px;
-    
+    margin-left: 25px;
     padding-right: 0px;
     padding-left: 0px;
     width: 75px;
@@ -233,9 +233,10 @@ nav{
     background-color: var(--celeste);
 }
 .textBuscador{
-    margin-left: 60px;
+    position: relative;
+    margin-left: 125px;
     padding-left: 20px;
-    padding-right: 50px;
+    padding-right: 109px;
     display: block;
     margin-top: -13px;
 
@@ -247,10 +248,14 @@ nav{
 a.botonPresupuesto{
     color: white;
 }
+.borderBusqueda{
+    border-bottom: 1px dashed var(--celeste);
+}
 .listStyles{
-   margin-bottom: 35px;
+   margin-bottom: 25px;
    list-style-type: none;
-   margin-top: 30px;
+   margin-top: 35px;
+ 
 }
 .textCantidad{
     margin-top: 8px;
@@ -307,7 +312,7 @@ a.botonPresupuesto{
     position: absolute;
     width: 77px;
     margin-bottom: 30px;
-    margin-left: -8px;
+    margin-left: -175px;
     
 }
 .cardCarrito{
@@ -1122,7 +1127,7 @@ footer{
         left: 30px !important;
     }
     .botonBuscador{
-        margin-left: 110px !important;
+        margin-left: 25px !important;
         padding-right: 0px !important;
         padding-left: 0px !important;
         width: 75px !important;
@@ -1250,12 +1255,16 @@ footer{
       .buscadorContainer{
         margin-top: 40px;
     }
-}
-    .iconInput {
-        position: absolute !important;
-        left: 450px !important;
-        top: 162px !important;
+    .iconInput{
+        left: 366px !important;
+        top: 167px !important;
     }
+    .modalContainer{
+        left: 30px !important;
+    }
+}
+    
+    
     .container-texto a {
         margin: 0 0 30px 0 !important;
     }
@@ -1286,9 +1295,7 @@ footer{
     .box-son-level-two {
         width: 95% !important;
     }
-    .modalContainer{
-        left: 30px !important;
-    }
+    
     
 }
 @media only screen and ( max-width: 768px){
@@ -1327,6 +1334,7 @@ footer{
         width: 500px !important;
         margin-left:120px !important;
     }
+    
     .divProductos{
         display: flex !important;
         flex-direction: column !important;
@@ -1399,7 +1407,7 @@ footer{
         color: #EA5534 !important; 
     }
     .modalContainer{
-        left: -8px !important;
+        left: -5px !important;
     }
     .botonEliminar{
         margin-left: 289px !important;
@@ -1410,6 +1418,9 @@ footer{
     }
     .buscadorContainer{
         margin-top: 40px !important;
+    }
+    .cardStyles{
+        margin-right: 0px;
     }
 @media only screen and ( max-width: 576px){
     .carousel {
@@ -1622,16 +1633,18 @@ footer{
        margin-left: 60px !important;
     }
     .textBuscador{
-        padding-right: 25px;
+        padding-right: 25px !important;
     }
     .botonBuscador{
-        margin-left: 106px;
-        background-color: var(--celeste);
-        cursor: pointer;
+        margin-left: 50px !important;
+        cursor: pointer !important;
     }
     .buscadorContainer{
-        margin-top: 38px;
-        margin-left: 28px;
+        margin-top: 38px !important;
+        margin-left: 28px !important;
+    }
+    .img1{
+        margin-left: -130px !important;
     }
 }
 }

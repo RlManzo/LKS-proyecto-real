@@ -337,25 +337,24 @@ const filtrar = () => {
                 if ( nombre.indexOf(texto) !== -1){
                     resultado.innerHTML += 
                     
-                    `<li class="listStyles">
+                    `<div class="borderBusqueda">
+                    <li class="listStyles">
                        <img class="img1"  src=${producto.img} />
                        <div>
                        <h6 class="textBuscador">${producto.nombre}</h5>
                        </div>
                        <button class=" botonBuscador" id= "botton${producto.id}" onClick="agregarAlModal(${producto.id}),mostrarDetalleProducto()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><img class="ojoStyle" src="./assets/ojo.png"/></button>    
-                    </li>`
+                    </li>
+                    </div>`
                     busqueda.style.opacity = 1;
                   
                     const botton = document.getElementById(`botton${producto.id}`);
                     botton.addEventListener("click", () => {
-                        agregarAlCarrito(producto.id);
+                        agregarAlModal(producto.id);
                         
                     } );
                  }
               
-               if( resultado.innerHTML == '' ){
-                 resultado.innerHTML = `<li>Producto no encontrado</li>`;
-            }
             const cerrarBusqueda = document.getElementById("cerrarBusqueda")
             cerrarBusqueda.addEventListener("click", () =>{
                 busqueda.style.opacity = 0;
