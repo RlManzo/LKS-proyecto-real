@@ -1,25 +1,37 @@
 class Producto{
-    constructor(id,nombre, img, info,categoria){
+    constructor(id,nombre, img, info, infoModal, cat, categoria1, categoria2, detalle1, detalle2){
         this.id = id;
         this.nombre = nombre;
         this.img = img;
         this.info = info;
-        this.categoria = categoria;
+        this.infoModal = infoModal;
+        this.cat = cat;
+        this.categoria1 = categoria1; //esta opcion de categoria permite editar todas las secciones del filtro de productos. En los datos de productos esta despues
+        this.categoria2 = categoria2;
         this.cantidad = 1;
+        this.detalle1 = detalle1;
+        this.detalle2 = detalle2
       }
     }
+//objetos a partir de la clase con los datos de los productos
+const producto1 = new Producto(1,"Remera de spun blanco/gris","https://d3ugyf2ht6aenh.cloudfront.net/stores/533/589/products/diseno-sin-titulo81-daa6f09e172fe494c015751299340641-640-0.webp","sublimable","Bebé/niños/Adultos. Spun Blanco o Gris.","","sublimable","DTF","Niños","Adultos");
+const producto2 = new Producto(2,"Remera algodon niño/adultos","https://http2.mlstatic.com/D_NQ_NP_990420-MLA53487769630_012023-O.webp","vinilo/DTF/serigrafia","Bebé/niños/Adultos. Consultar colores.","cat2","serigrafia","DTF","Niños","Adultos");
+const producto3 = new Producto(3,"Gorra trucker niño/adultos","https://puraimagendigital.com.ar/2446-large_default/gorra-trucker-adulto-roja-frente-blanco.jpg","sublimable","Trucker, estilo camionero. Varios colores.","cat3","Sublimable", "Vinilo", "Niños","Adultos");
+const producto4 = new Producto(4,"Buzo de friza adultos","https://www.monarqui.com.ar/wp-content/uploads/buzo-canguro-gris-PERSONALIZADO-frente.jpg","sublimable/DTF/serigrafia","Buzo de friza o friza sublimable","cat2","sublimable", "DTF","Adultos","Serigrafia");
+const producto5 = new Producto(5,"Campera de friza","https://d3ugyf2ht6aenh.cloudfront.net/stores/001/702/486/products/af32x00i-101-73aa7078002cab87a416528813808503-640-0.webp","sublimable/DTF/serigrafia","Camperas de friza o friza sublimable","cat2","serigrafia","DTF","Adultos","Niños");
+const producto6 = new Producto(6,"Body bebe","https://www.sublimadosaiki.com.ar/store/wp-content/uploads/2020/04/IMG-20200103-WA0013.jpg","sublimable/DTF/vinilo/serigrafia","Body mangas cotrtas o mangas largas, dependiendo la época del año","cat1","vinilo","Sublimable","Blanco","Serigrafia");
+const producto7 = new Producto(7,"Mouse pad","https://www.la-grafika.com.ar/wp-content/uploads/2018/04/pad-mouse-para-sublimacion-delgado-2mm-x-25-unidades-D_NQ_NP_958111-MCO20477223636_112015-F.jpg","Sublimable","Mouse pad personalizado, con el diseño que más te guste.","cat1","Sublimable","Neopren","Diseños","En stock" );
+const producto8 = new Producto(8,"Rompe cabezas","https://http2.mlstatic.com/D_NQ_NP_969681-MLM26409354316_112017-O.jpg","sublimable","Rompe cabezas de cartón o madera de diferentes cantidades de piezas.","cat1","Sublimable","Diseños","Carton","Madera");
+const producto9 = new Producto(9,"Cartuchera","https://lomassublimado.com.ar/3126-large_default/mockup-de-cartuchera.jpg","sublimable","Cartuchera personalizada de diferentes tamaños.","cat1","2 pisos","Sublimable","Sobre","1 piso" );
+const producto10 = new Producto(10,"Taza recta polimero","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","sublimable","Totalmente personalizable, consultar por cantidad.","cat3","sublimable","Diseños","300ml","500ml" );
+const producto11 = new Producto(11,"Taza recta ceramica","https://http2.mlstatic.com/D_NQ_NP_877045-MLA45450820330_042021-O.webp","sublimable","Totalmente personalizable, consultar por cantidad.","cat3","sublimable","Diseños","300ml","500ml" );
+const producto12 = new Producto(12,"Mochila","https://d22fxaf9t8d39k.cloudfront.net/b294482277b3908c53651a5ef76973ae8470fe45b3d22d2f537fb72ee8ec873429655.jpeg","sublimable","Cordura y simil neopren para sublimar","cat3","Neopren","Sublimable","Niños","Adultos" );
+const producto13 = new Producto(13,"Botinero","https://d2r9epyceweg5n.cloudfront.net/stores/399/451/products/9970549a-bc08-4793-9c04-200e20ee4c671-687f2f28937846182f16195576753799-640-0.png","sublimable","Cordura y simil neopren para sublimar","cat3","Neopren","Sublimable","Negro","Cordura" );
+const producto14 = new Producto(14,"Bolso matero","https://d2r9epyceweg5n.cloudfront.net/stores/049/818/products/bolso-matero-con-cierre1-53f95b13ef2d3d1c9816509809748687-480-0.webp","sublimable","Cordura y simil neopren para sublimar","cat3","Sublimable","Neopren","Negro","Cordura" );
+const producto15 = new Producto(15,"Pines","https://malve.com.ar/wp-content/uploads/2019/06/pins.png","sublimable","Pines ṕublicitarios, prendedores, destapadores, llaveros, espejos.","polimero","Sublimable","Diseños","Tamaños" );
 
-const producto1 = new Producto(1,"Remera sublimada","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","vinilo","vinilo");
-const producto2 = new Producto(2,"Remera vinilo","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","sublimable","sublimable");
-const producto3 = new Producto(3,"Remera serigrafia","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","polimero","vinilo");
-const producto4 = new Producto(4,"Remera sublimada","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","3d","sublimable");
-const producto5 = new Producto(5,"Remera sublimada","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","sublimable","sublimable");
-const producto6 = new Producto(6,"Remera serigrafia","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","polimero","vinilo");
-const producto7 = new Producto(7,"Remera sublimada","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","3d","vinilo");
-const producto8 = new Producto(8,"Remera sublimada","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","sublimable","dtf");
-const producto9 = new Producto(9,"Remera sublimada","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","sublimable","dtf");
-
-const arrayProductos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7,producto8,producto9];
+//array con todos los productos de la web
+const arrayProductos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7,producto8,producto9, producto10,producto11,producto12,producto13,producto14,producto15];
 console.log(arrayProductos)
 const carrito = [];
 const modal = [];
@@ -50,7 +62,7 @@ const cardSeccion = (producto)=>{
      </div>
      <div class="infoCard">
      <button class=" botonHeader botonProductos1" id= boton${producto.id} onClick="agregarAlCarrito(${producto.id},agregarNumeroCarrito())">AGREGAR</button>
-     <button class="botonHeader botonProductos2" id= boton><a class="botonInfo" href="https://api.whatsapp.com/send?phone=1131686767&text=Hola!%20Me%20gustaria%20saber%20mas%20%20sobre%20el%20siguiente%20articulo:%0A%0A${producto.nombre}%20Categoria:%0A%0A${producto.info}%0A%0A" target="_blank"</><i><img class="iconoWhatapps" src="./assets/whatappsLogo.svg" alt=""></i>Pedir Info</button>
+     <button class="botonHeader botonProductos2" id= boton><a class="botonInfo" href="https://api.whatsapp.com/send?phone=543513721017&text=Hola%20LKS!%20Me%20gustaria%20saber%20mas%20%20sobre%20el%20siguiente%20articulo:%0A%0A${producto.nombre}.%20Categoria:%0A%0A${producto.info}.%20Detalle:%0A%0A${producto.infoModal}" target="_blank"</><i><img class="iconoWhatapps" src="./assets/whatappsLogo.svg" alt=""></i>Pedir Info</button>
      
      </div>
 </div>`
@@ -65,9 +77,9 @@ const botonFiltar4 = document.getElementById("botonProducto4");
 
 //variables para filtrar productos
 const categoriaFiltrar = arrayProductos
-const categoriaFiltrar2 = arrayProductos.filter(producto=> producto.categoria === "sublimable");
-const categoriaFiltrar3 = arrayProductos.filter(producto=> producto.categoria === "vinilo");
-const categoriaFiltrar4 = arrayProductos.filter(producto=> producto.categoria === "dtf");
+const categoriaFiltrar2 = arrayProductos.filter(producto=> producto.cat === "cat1");
+const categoriaFiltrar3 = arrayProductos.filter(producto=> producto.cat === "cat2");
+const categoriaFiltrar4 = arrayProductos.filter(producto=> producto.cat === "cat3");
 
 
 mostrarProducto()
@@ -113,7 +125,7 @@ function agregarAlCarrito(id){
     }
     Toastify({
       text: "Agregaste el producto!",
-      gravity: "top",
+      gravity: "bottom",
       style: {
           background: "linear-gradient(247deg, rgba(37,177,86,0.6727065826330532) 0%, rgba(44,205,14,1) 100%)",
           
@@ -156,7 +168,7 @@ function mostrarDetalleProducto(){
                         <img src="${producto.img}" class="imgModalDetail card-img-top" alt="${producto.nombre}">
                         <img src="${producto.img}" class="imgModalDetail card-img-top" alt="${producto.nombre}">
                         <img src="${producto.img}" class="imgModalDetail card-img-top" alt="${producto.nombre}">
-                        <img src="${producto.img}" class="imgModalDetail card-img-top" alt="${producto.nombre}">
+                        
                         </div>
                         <div class="col-md-2">
                          <img id="imageModal" src="${producto.img}" class="imgModal card-img-top" alt="${producto.nombre}" onClick="()=>{imgModal.classlist.add(imgModal:hover)} ">
@@ -166,7 +178,7 @@ function mostrarDetalleProducto(){
                             <div className="card-body text-center .col-md-4 .ms-auto ">
                             <h5 class="h3  card-title textModalProducto">${producto.nombre}</h5>
                             
-                            <h6 class=" text-end h8 textDescriptionModal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse soluta fugit vero dicta nisi, dolorem harum cumque excepturi a. </h6>
+                            <h6 class=" h8 textDescriptionModal"> ${producto.infoModal} </h6>
                             <div class="container text-center caracteristicaColor">
                             <h6 class="h8">Color producto:</h6>
                             <button class="colorModal1">1</button>
@@ -174,12 +186,12 @@ function mostrarDetalleProducto(){
                             <button class="colorModal3">1</button>
                             </div>
                             <div class="container text-center buttonCategoria">
-                            <button class="modalCategoria">300ml</button>
-                            <button class="modalCategoria">500ml</button>
+                            <button class="modalCategoria">${producto.detalle1} </button>
+                            <button class="modalCategoria">${producto.detalle2} </button>
                             </div>
                             <div class="container text-center buttonCategoria">
-                            <button class="modalCategoria">${producto.categoria} </button>
-                            <button class="modalCategoria">${producto.categoria} </button>
+                            <button class="modalCategoria">${producto.categoria1} </button>
+                            <button class="modalCategoria">${producto.categoria2} </button>
                             </div>
                                <div class="d-flex botonesDetalleModal">
                                   <button class="text-center botonHeader botonDetalle1" id="botonModal${producto.id}">AGREGAR</button>
@@ -260,22 +272,18 @@ function mostrarCarrito(){
                           
                           <div class="titleCards ">
                           <h5 class="h6">${producto.nombre}</h5>
-                          <h8 class="h8">${producto.categoria}</h>
+                          
+                          <h8 class="h8">${producto.categoria1}</h>
                           <div class="d-flex">
-                          <button class="buttonCantidad">-</button>
-                          <p class="textCantidad">
-                          ${producto.cantidad}
-                          </p>
-                          <button class="buttonCantidad" id="botonMas" >+</button>
+                          <h8 class="catCant">cantidad:${producto.cantidad} </h8>
                           </div>
                           </div>
                                          
           </div>
        `
 
-
-}
-      )
+        }
+       );
       }
  
 
@@ -302,11 +310,11 @@ const sendcarrito = () => {
   let totalCompra = "";
   let cantidad = 0;
   carrito.forEach(Producto =>{
-      totalCompra += `  Producto:${Producto.nombre} Cantidad: ${Producto.cantidad} `;
+      totalCompra += `  Producto:${Producto.nombre}. Cantidad: ${Producto.cantidad} `;
       cantidad = Producto.precio * Producto.cantidad 
   })
   
-  mandarCarrito.innerHTML = ` <button class="text-center botonHeader"" ><a class="botonPresupuesto" href="https://api.whatsapp.com/send?phone=543513721017&text=Hola!%20Me%20gustaria%20hacer%20el%20siguiente%20pedido:%0A%0A${totalCompra}%0A%0A" target="_blank"</>Pedir Presupuesto</button>`
+  mandarCarrito.innerHTML = ` <button class="text-center botonHeader"" ><a class="botonPresupuesto" href="https://api.whatsapp.com/send?phone=543513721017&text=Hola%20LKS!%20Me%20gustaria%20hacer%20el%20siguiente%20pedido:%0A%0A${totalCompra}%0A%0A" target="_blank"</>Pedir Presupuesto</button>`
     
 }
 
