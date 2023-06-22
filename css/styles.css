@@ -328,6 +328,12 @@ a.botonPresupuesto{
     margin-top: 10px;
     border-bottom:1.5px dashed var(--celeste) ;
 }
+.imgCarrito{
+    position: absolute;
+    width: 77px;
+    margin-bottom: 30px;
+    margin-left: -14px;
+}
 .catCant{
  margin-left: -5px; 
  border-radius: 15px;
