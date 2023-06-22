@@ -2,15 +2,15 @@ class Producto{
     constructor(id,nombre, img, info, infoModal, cat, categoria1, categoria2, detalle1, detalle2){
         this.id = id;
         this.nombre = nombre;
-        this.img = img;
+        this.img = img; //las imagenes no estan guardadas en ninguna carpeta, corresponden a URL.
         this.info = info;
-        this.infoModal = infoModal;
-        this.cat = cat;
-        this.categoria1 = categoria1; //esta opcion de categoria permite editar todas las secciones del filtro de productos. En los datos de productos esta despues
-        this.categoria2 = categoria2;
+        this.infoModal = infoModal; //info que solo aparece en el detalle de productos
+        this.cat = cat; //esta opcion de categoria permite editar todas las secciones del filtro de productos. En los datos de productos figuran como "cat1", "cat2", "cat3".
+        this.categoria1 = categoria1; //info que solo aparece en el detalle de productos
+        this.categoria2 = categoria2; //info que solo aparece en el detalle de productos
         this.cantidad = 1;
-        this.detalle1 = detalle1;
-        this.detalle2 = detalle2
+        this.detalle1 = detalle1;  //info que solo aparece en el detalle de productos
+        this.detalle2 = detalle2; //info que solo aparece en el detalle de productos
       }
     }
 //objetos a partir de la clase con los datos de los productos
@@ -20,7 +20,7 @@ const producto3 = new Producto(3,"Gorra trucker niño/adultos","https://puraimag
 const producto4 = new Producto(4,"Buzo de friza adultos","https://www.monarqui.com.ar/wp-content/uploads/buzo-canguro-gris-PERSONALIZADO-frente.jpg","sublimable/DTF/serigrafia","Buzo de friza o friza sublimable","cat2","sublimable", "DTF","Adultos","Serigrafia");
 const producto5 = new Producto(5,"Campera de friza","https://d3ugyf2ht6aenh.cloudfront.net/stores/001/702/486/products/af32x00i-101-73aa7078002cab87a416528813808503-640-0.webp","sublimable/DTF/serigrafia","Camperas de friza o friza sublimable","cat2","serigrafia","DTF","Adultos","Niños");
 const producto6 = new Producto(6,"Body bebe","https://www.sublimadosaiki.com.ar/store/wp-content/uploads/2020/04/IMG-20200103-WA0013.jpg","sublimable/DTF/vinilo/serigrafia","Body mangas cotrtas o mangas largas, dependiendo la época del año","cat1","vinilo","Sublimable","Blanco","Serigrafia");
-const producto7 = new Producto(7,"Mouse pad","https://www.la-grafika.com.ar/wp-content/uploads/2018/04/pad-mouse-para-sublimacion-delgado-2mm-x-25-unidades-D_NQ_NP_958111-MCO20477223636_112015-F.jpg","Sublimable","Mouse pad personalizado, con el diseño que más te guste.","cat1","Sublimable","Neopren","Diseños","En stock" );
+const producto7 = new Producto(7,"Mouse pad","https://www.la-grafika.com.ar/wp-content/uploads/2018/04/pad-mouse-para-sublimacion-delgado-2mm-x-25-unidades-D_NQ_NP_958111-MCO20477223636_112015-F.jpg","sublimable","Mouse pad personalizado, con el diseño que más te guste.","cat1","Sublimable","Neopren","Diseños","En stock" );
 const producto8 = new Producto(8,"Rompe cabezas","https://http2.mlstatic.com/D_NQ_NP_969681-MLM26409354316_112017-O.jpg","sublimable","Rompe cabezas de cartón o madera de diferentes cantidades de piezas.","cat1","Sublimable","Diseños","Carton","Madera");
 const producto9 = new Producto(9,"Cartuchera","https://lomassublimado.com.ar/3126-large_default/mockup-de-cartuchera.jpg","sublimable","Cartuchera personalizada de diferentes tamaños.","cat1","2 pisos","Sublimable","Sobre","1 piso" );
 const producto10 = new Producto(10,"Taza recta polimero","https://http2.mlstatic.com/D_NQ_NP_815250-MLA49035064606_022022-O.webp","sublimable","Totalmente personalizable, consultar por cantidad.","cat3","sublimable","Diseños","300ml","500ml" );
@@ -29,9 +29,12 @@ const producto12 = new Producto(12,"Mochila","https://d22fxaf9t8d39k.cloudfront.
 const producto13 = new Producto(13,"Botinero","https://d2r9epyceweg5n.cloudfront.net/stores/399/451/products/9970549a-bc08-4793-9c04-200e20ee4c671-687f2f28937846182f16195576753799-640-0.png","sublimable","Cordura y simil neopren para sublimar","cat3","Neopren","Sublimable","Negro","Cordura" );
 const producto14 = new Producto(14,"Bolso matero","https://d2r9epyceweg5n.cloudfront.net/stores/049/818/products/bolso-matero-con-cierre1-53f95b13ef2d3d1c9816509809748687-480-0.webp","sublimable","Cordura y simil neopren para sublimar","cat3","Sublimable","Neopren","Negro","Cordura" );
 const producto15 = new Producto(15,"Pines","https://malve.com.ar/wp-content/uploads/2019/06/pins.png","sublimable","Pines ṕublicitarios, prendedores, destapadores, llaveros, espejos.","polimero","Sublimable","Diseños","Tamaños" );
+const producto16 = new Producto(16,"Fundas","https://d22fxaf9t8d39k.cloudfront.net/c1617945c70b1765043313e5cb3b9072e50c4fb6f38522994f00f26a4c00587036560.png","sublimable","Cordura y simil neopren para sublimar.","cat3","Tablet","Sublimable","Notebook","Celular" );
+const producto17 = new Producto(17,"Anotador","https://sublitextil.com.ar/wp-content/uploads/2019/01/Anotador-Libreta-Para-Sublimar-2.jpg","sublimable","Anotadores de 40 hojas ralladas, cuadriculadas o lisas.","cat3","Sublimable","Carton","Chico","Anillado" );
+const producto18 = new Producto(18,"Set asador","https://sublitextil.com.ar/wp-content/uploads/2019/01/set-asado-para-sublimar-Sublitextil.jpg","sublimable","Cordura y simil neopren para sublimar","cat3","Cordura","Sublimable","Diseños","Negro" );
 
 //array con todos los productos de la web
-const arrayProductos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7,producto8,producto9, producto10,producto11,producto12,producto13,producto14,producto15];
+const arrayProductos = [producto1, producto2, producto3, producto4, producto5, producto6,producto7,producto8,producto9, producto10,producto11,producto12,producto13,producto14,producto15, producto16, producto17, producto18];
 console.log(arrayProductos)
 const carrito = [];
 const modal = [];
