@@ -324,6 +324,9 @@ a.botonPresupuesto{
     padding-bottom: 20px;
     
 }
+.sectionProd{
+    position: initial;
+}
 .carritoContainer{
     margin-top: 10px;
     border-bottom:1.5px dashed var(--celeste) ;
