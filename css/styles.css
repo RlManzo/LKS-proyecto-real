@@ -366,6 +366,7 @@ a.botonPresupuesto{
     justify-content: center;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
 }
 .box-button p{
     font-family: 'Inter', sans-serif;
@@ -533,17 +534,14 @@ a.botonPresupuesto{
 
 .botonHeader{
     
-    background-color: #EA5534;
-    color: white;
+    background-color: var(--ladrillo);
+    color: var(--blanco);
     border: none;
     border-radius: 20px;
     width: 190px;
     height: 45px;
     left: calc(50% - 190px/2);
     top: 20px;
-    }
-    .botonHeader:hover{
-        background-color: #45ACB4;
     }
 .botonProductos1{
         
@@ -555,9 +553,11 @@ a.botonPresupuesto{
         margin-top: 10px;
         border-radius: 13px;
         font-weight: 500;
+        transition: 0.5s;
 }
 .botonProductos1:hover{
-    color: #1C2D46;
+    color: var(--blanco);
+    background-color: var(--celeste);
 
 }
 .botonProductos2{
@@ -565,11 +565,16 @@ a.botonPresupuesto{
     width: 120px;
     padding-right: 20px;
     
-    background-color: #B5DCDA;
+    background-color: var(--celeste);
      height: 35px;
     margin-top: 10px;
     border-radius: 13px;
     font-weight: 500;
+    transition: .5s;
+}
+.botonProductos2:hover{
+    background-color: var(--blanco);
+    border: 1px solid var(--azul);
 }
 
 .iconoWhatapps{
@@ -768,7 +773,7 @@ a.botonInfo{
 .contenedor-persona img{
     position: absolute;
     top: -27%;
-    width: 190px;
+    width: 210px;
     height: 220px;
     border-radius: 50%;
 }
@@ -844,10 +849,10 @@ a.botonInfo{
 .box-son-level-one input{
     width: 235px;
     height: 49px;
+    padding: 10px;
     background-color: var(--blanco);
     border: 2px solid var(--celeste);
     border-radius: 12px;
-    
 }
 
 .box-son-level-one select{
@@ -1004,6 +1009,7 @@ footer{
 
 
 /*Animate*/
+
 .fade-out-top {
 	-webkit-animation: fade-out-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: fade-out-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
