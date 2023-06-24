@@ -24,15 +24,12 @@ items.forEach((e) => {
     });
 });
 
-function animacionNavbar(){
-    if(window.screen.width <= tablet){
-        if(boxNavbar.classList.contains("is-active-navbar")){
-            boxNavbar.classList.remove("fade-out-top");
-            boxNavbar.classList.add("fade-in-top");
-        }else{
-            boxNavbar.classList.remove("fade-in-top");
-            boxNavbar.classList.add("fade-out-top");
-        }
-    }
-    
+function animacionNavbar(){   
+    if(boxNavbar.classList.contains("is-active-navbar")){
+        boxNavbar.classList.remove("fade-out-top");
+        boxNavbar.classList.add("fade-in-top");
+    }else{
+        boxNavbar.classList.remove("fade-in-top");
+        boxNavbar.classList.add("fade-out-top");
+    }   
 }

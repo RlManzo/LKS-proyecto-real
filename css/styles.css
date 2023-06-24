@@ -1155,6 +1155,7 @@ footer{
         left: 285px !important;
         top: 177px !important;
     }
+}
 @media only screen and ( max-width: 850px){
     .carousel {
         height: 350px !important;
@@ -1277,9 +1278,6 @@ footer{
     .modalContainer{
         left: 30px !important;
     }
-}
-    
-    
     .container-texto a {
         margin: 0 0 30px 0 !important;
     }
@@ -1309,9 +1307,7 @@ footer{
     }
     .box-son-level-two {
         width: 95% !important;
-    }
-    
-    
+    } 
 }
 @media only screen and ( max-width: 768px){
     .box-personas-nosotros {
@@ -1437,6 +1433,7 @@ footer{
     .cardStyles{
         margin-right: 0px;
     }
+}
 @media only screen and ( max-width: 576px){
     .carousel {
         height: 250px !important;
@@ -1662,5 +1659,3 @@ footer{
         margin-left: -130px !important;
     }
 }
-}
-
