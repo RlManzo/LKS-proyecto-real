@@ -39,6 +39,6 @@ Por último, se ha creado una carpeta llamada 'assets' en la cual se encuentran 
 [Federico Lacolla](https://www.linkedin.com/in/federico-lacolla ) - Diseñador UX/UI - [Portafolio](https://www.behance.net/federicola1dce/projects).<br>
 [Julieta Vivoli](https://www.linkedin.com/in/julietavivoli/ ) - Diseñadora UX/UI - [Portafolio](https://www.behance.net/julietavivoli).<br>
 [Ricardo Manzo](https://www.linkedin.com/in/manzo-ricardo/) - Desarrollador web frontend - [Portafolio](https://portfolio-ricardo-manzo.vercel.app/).<br>
-[Augusto Gutierrez](hhttps://www.linkedin.com/in/augusto-gutierrez/) - Desarrollador web frontend - [Portafolio](https://augustogutierrez.netlify.app/).<br>
+[Augusto Gutierrez](https://www.linkedin.com/in/augusto-gutierrez/) - Desarrollador web frontend - [Portafolio](https://augustogutierrez.netlify.app/).<br>
 [Selene D'Ambra]( https://www.linkedin.com/in/selenedambra/) - Diseñadora UX/UI.<br>
 [Karen Tripoloni](https://www.linkedin.com/in/karen-tripoloni/) - Community Manager.
